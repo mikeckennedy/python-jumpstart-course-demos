@@ -13,15 +13,15 @@ What applications will we build?
 
 We will build the following apps, which among many other things, focus on the language concepts listed under them.
 
-1. Hello world
+1. [Hello world](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/01_hello_world/you_try)
     * test your environment 
-2. Guess that number 
+2. [Guess that number](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/02-guess-number-app) 
     * user input
     * conditionals
     * string parsing 
-3. Birthday app
+3. [Birthday app](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/03_birthday/you_try)
     * dates and times
-4. Personal journal
+4. [Personal journal](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/04_journal/you_try)
     * text-based file i/o 
 5. Weather client
     * external packages
@@ -34,11 +34,13 @@ We will build the following apps, which among many other things, focus on the la
     * classes
     * inheritance
     * magic methods 
-8. Real estate analyzer
+8. File searcher
+    * navigating the file system
+9. Real estate analyzer
     * file formats
     * list comprehensions
     * generators expressions 
-9. Movie lookup app
+10. Movie lookup app
     * error handling
     * exceptions
     * Advanced HTTP clients

@@ -42,12 +42,9 @@ def download_cats(folder):
 
 
 def display_cats(folder):
-    if os.name == 'posix':
-        subprocess.call(['open', folder])
-    elif os.name == 'nt':
-        subprocess.call(['start', folder])
-    else:
-        print('Cannot display cats, unknown OS {}'.format(os.name))
+    # open folder
+    print('Displaying cats in OS window.')
+    subprocess.call(['open', folder])
 
 
 if __name__ == '__main__':

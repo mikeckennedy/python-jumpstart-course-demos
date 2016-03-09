@@ -20,7 +20,7 @@ def print_header():
 
 
 def get_or_create_output_folder():
-    base_folder = os.path.dirname(__file__)
+    base_folder = os.path.abspath(os.path.dirname(__file__))
     folder = 'cat_pictures'
     full_path = os.path.join(base_folder, folder)
 
@@ -48,7 +48,7 @@ def display_cats(folder):
     if platform.system() == 'Darwin':
         subprocess.call(['open', folder])
     elif platform.system() == 'Windows':
-        subprocess.call(['start', folder])
+        subprocess.call(['explorer', folder])
     elif platform.system() == 'Linux':
         subprocess.call(['xdg-open', folder])
     else:

@@ -23,12 +23,12 @@ We will build the following apps, which among many other things, focus on the la
     * dates and times
 4. [Personal journal](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/04_journal/you_try)
     * text-based file i/o 
-5. Weather client
+5. [Weather client](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/05_weather_client/you_try)
     * external packages
     * pip
     * screen scraping
     * HTTP clients 
-6. LOL Cats Factory
+6. [LOL Cats Factory](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/06_lolcat_factory/you_try)
     * binary files on the internet 
 7. Wizard battle
     * classes

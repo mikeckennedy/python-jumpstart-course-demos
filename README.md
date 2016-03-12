@@ -30,7 +30,7 @@ We will build the following apps, which among many other things, focus on the la
     * HTTP clients 
 6. [LOL Cats Factory](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/06_lolcat_factory/you_try)
     * binary files on the internet 
-7. Wizard battle
+7. [Wizard battle](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/07_wizard_battle/you_try)
     * classes
     * inheritance
     * magic methods 

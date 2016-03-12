@@ -1,6 +1,6 @@
 # Python Jumpstart by Building 10 Apps Course Demos
 
-This repository contains all the "handout" materials for my [Python Jumpstart by Building 10 Apps course](https://talkpython.fm). This includes **try it yourself** and **finished** versions of the 10 apps. [Register for the course](https://www.kickstarter.com/projects/mikeckennedy/python-jumpstart-by-building-10-apps-video-course) before the Kickstarter closes.
+This repository contains all the "handout" materials for my [Python Jumpstart by Building 10 Apps course](https://training.talkpython.fm). This includes **try it yourself** and **finished** versions of the 10 apps. [Register for the course](https://www.kickstarter.com/projects/mikeckennedy/python-jumpstart-by-building-10-apps-video-course) before the Kickstarter closes.
 
 Not familiar with my Python jumpstart course? Here's a quick intro video.
 

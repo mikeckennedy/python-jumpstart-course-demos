@@ -60,19 +60,3 @@ class Dragon(Creature):
         scale_modifier = self.scaliness / 10
 
         return base_roll * fire_modifier * scale_modifier
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

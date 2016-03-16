@@ -34,9 +34,9 @@ We will build the following apps, which among many other things, focus on the la
     * classes
     * inheritance
     * magic methods 
-8. File searcher
+8. [File searcher](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/08_file_searcher/you_try)
     * navigating the file system
-9. Real estate analyzer
+9. [Real estate analyzer](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/09_real_estate_analyzer/you_try)
     * file formats
     * list comprehensions
     * generators expressions 

@@ -1,6 +1,6 @@
-# App 8: File Searcher App
+# App 9: Real Estate Analyzer App
 
-![image](app-8-screenshot.png)
+![image](app-9-screenshot.png)
  
 If you want to try this yourself, try to build the interactive app above. 
 

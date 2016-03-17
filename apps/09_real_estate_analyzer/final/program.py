@@ -53,17 +53,14 @@ def load_file(filename):
 # def get_price(p):
 #     return p.price
 
-def query_data(data): # : list[Purchase]):
-    # if data was sorted by price:
+def query_data(data):  # : list[Purchase]):
     # data.sort(key=get_price)
     data.sort(key=lambda p: p.price)
 
-    # most expensive house?
     high_purchase = data[-1]
     print("The most expensive house is ${:,} with {} beds and {} baths".format(
         high_purchase.price, high_purchase.beds, high_purchase.baths))
 
-    # least expensive house?
     low_purchase = data[0]
     print("The least expensive house is ${:,} with {} beds and {} baths".format(
         low_purchase.price, low_purchase.beds, low_purchase.baths))
@@ -71,35 +68,6 @@ def query_data(data): # : list[Purchase]):
     # average price house?
     # average price of 2 bedroom houses
     pass
-
-
-
-def find_significant_numbers(nums, predicate):
-    for n in nums:
-        if predicate(n):
-            yield n
-
-numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34]
-sig = find_significant_numbers(numbers, lambda x: x % 2 == 1)
-print(list(sig))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':

@@ -1,6 +1,8 @@
 import csv
 import os
 
+from data_types import Purchase
+
 
 def main():
     print_header()
@@ -24,17 +26,13 @@ def get_data_file():
 
 def load_file(filename):
     with open(filename, 'r', encoding='utf-8') as fin:
-
         reader = csv.DictReader(fin)
+        purchases = []
         for row in reader:
-            print(type(row), row)
-            print("Bed count: {}".format(row['beds']))
+            p = Purchase.create_from_dict(row)
+            purchases.append(p)
 
-        # header = fin.readline().strip()
-        # reader = csv.reader(fin, delimiter=',')
-        # for row in reader:
-        #     print(type(row), row)
-        #     beds = row[4]
+        return purchases
 
 
 # def load_file_basic(filename):
@@ -49,10 +47,59 @@ def load_file(filename):
 #             lines.append(line_data)
 #
 #         print(lines[:5])
+# list[Purchase]
 
 
-def query_data(data):
+# def get_price(p):
+#     return p.price
+
+def query_data(data): # : list[Purchase]):
+    # if data was sorted by price:
+    # data.sort(key=get_price)
+    data.sort(key=lambda p: p.price)
+
+    # most expensive house?
+    high_purchase = data[-1]
+    print("The most expensive house is ${:,} with {} beds and {} baths".format(
+        high_purchase.price, high_purchase.beds, high_purchase.baths))
+
+    # least expensive house?
+    low_purchase = data[0]
+    print("The least expensive house is ${:,} with {} beds and {} baths".format(
+        low_purchase.price, low_purchase.beds, low_purchase.baths))
+
+    # average price house?
+    # average price of 2 bedroom houses
     pass
+
+
+
+def find_significant_numbers(nums, predicate):
+    for n in nums:
+        if predicate(n):
+            yield n
+
+numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34]
+sig = find_significant_numbers(numbers, lambda x: x % 2 == 1)
+print(list(sig))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':

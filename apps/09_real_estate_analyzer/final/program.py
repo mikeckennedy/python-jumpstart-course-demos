@@ -1,3 +1,4 @@
+import csv
 import os
 
 
@@ -22,7 +23,32 @@ def get_data_file():
 
 
 def load_file(filename):
-    return []
+    with open(filename, 'r', encoding='utf-8') as fin:
+
+        reader = csv.DictReader(fin)
+        for row in reader:
+            print(type(row), row)
+            print("Bed count: {}".format(row['beds']))
+
+        # header = fin.readline().strip()
+        # reader = csv.reader(fin, delimiter=',')
+        # for row in reader:
+        #     print(type(row), row)
+        #     beds = row[4]
+
+
+# def load_file_basic(filename):
+#     with open(filename, 'r', encoding='utf-8') as fin:
+#         header = fin.readline().strip()
+#         print('found header: ' + header)
+#
+#         lines = []
+#         for line in fin:
+#             line_data = line.strip().split(',')
+#             bed_count = line_data[4]
+#             lines.append(line_data)
+#
+#         print(lines[:5])
 
 
 def query_data(data):

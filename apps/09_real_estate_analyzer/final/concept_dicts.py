@@ -40,14 +40,13 @@ for u in users:
 print(lookup['user4@talkpython.fm'])
 
 
+# LAMBDAS
+def find_significant_numbers(nums, predicate):
+    for n in nums:
+        if predicate(n):
+            yield n
 
 
-
-
-
-
-
-
-
-
-
+numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34]
+sig = find_significant_numbers(numbers, lambda x: x % 2 == 1)
+print(list(sig))

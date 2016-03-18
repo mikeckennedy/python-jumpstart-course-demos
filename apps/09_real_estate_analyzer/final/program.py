@@ -30,8 +30,8 @@ def get_data_file():
 
 
 def load_file(filename):
-    # with open(filename, 'r', encoding='utf-8') as fin:
-    with open(filename, 'r') as fin:
+    with open(filename, 'r', encoding='utf-8') as fin:
+    # with open(filename, 'r') as fin:
         reader = csv.DictReader(fin)
         purchases = []
         for row in reader:
@@ -59,7 +59,8 @@ def load_file(filename):
 # def get_price(p):
 #     return p.price
 
-def query_data(data):  # : list[Purchase]):
+def query_data(data): # list[Purchase]):
+    
     # data.sort(key=get_price)
     data.sort(key=lambda p: p.price)
 

@@ -43,7 +43,7 @@ We will build the following apps, which among many other things, focus on the la
     * file formats
     * list comprehensions
     * generators expressions 
-10. [**Movie lookup **app](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/10_movie_search/you_try)
+10. [**Movie lookup app**](https://github.com/mikeckennedy/python-jumpstart-course-demos/tree/master/apps/10_movie_search/you_try)
     * error handling
     * exceptions
     * Advanced HTTP clients

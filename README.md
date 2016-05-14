@@ -48,7 +48,7 @@ We will build the following apps, which among many other things, focus on the la
     * exceptions
     * Advanced HTTP clients
 
-Thanks to my backers?
+Thanks to my backers
 =============
 
 Thanks to everyone who backed the Kickstarter campaign. I want to give a [special thanks to backers who backed the project at extra level](https://github.com/mikeckennedy/python-jumpstart-course-demos/blob/master/Credits.md) to make this happen!

@@ -1,0 +1,63 @@
+ 0:00 All right, let's take the concepts that we had in our little playground script, 
+0:04 and let's move them over here to do a more proper application.
+0:07 So here is our program app and just like all of it's got a main method,
+0:11 it prints this little header, then it has this thing I am calling search event loop, 
+0:14 and we are just going to go around and around 
+0:16 and search for whatever the user wants to know about
+0:19 and we'll print out information about it. 
+0:21 Here we have just a search text 
+0:23 and we are just going to go while they are not entering x, which means exit in our world, 
+0:27 and if they entered something they do want to search about 
+0:29 we are going to go and call movie client.search 
+0:31 and then maybe we'll print out client, 
+0:34 to sort of just initialize it and then we can say perform search that will actually do it 
+0:39 and return the results, as a list of movie results named tuple kind of like we just saw. 
+0:46 So if I run this we should have something reasonable come out of here, 
+0:49 so if I search for cats, see what we get for cats, 
+0:53 boom, there we go, cats and dogs, it looks like it's working great. 
+0:57 Now, let's go over here and look at the movie client, 
+0:59 this exactly takes the ideas we had Request collections are named tuple 
+1:03 with these types in here and it just moves this over to a class, 
+1:08 so the class knows search text 
+1:10 and then you can perform the search on it not really super excited about this api, 
+1:14 I probably could have done it better, but whatever, it gets the point across. 
+1:17 We really need somewhere to introduce instability to our app 
+1:21 so that's kind of what this is about. 
+1:22 Here we can take whatever search text they gave us 
+1:24 and we are just going to plunk it in there 
+1:26 and we are going to go search for it exactly the way we saw 
+1:28 and we are using this super nice Pythonic style of saying 
+1:31 using the dictionary unpacking into the named tuple 
+1:34 and building up a list via list comprehensions. 
+1:39 Maybe we could do one more thing, 
+1:41 maybe we want to sort by title I don't know we could do that if we wanted, 
+1:44 we could say movies.sort(key=lambda m: m.title), like that, all right, 
+1:51 so this works great, let's just run it one more time, 
+1:53 let's search for a capital and let's actually change the output, 
+1:57 so we can see decent results down there, 
+1:59 so we are just printing out the list, let's say like this print found {} results, 
+2:06 we'll do a little format there and len of let's go up here and say results, 
+2:12 it was client.perform search and we'll say results here, 
+2:16 yeah, we'll say for r in results, print and well just do like this, 
+2:21 we'll say year--title.format. 
+2:25 So here well just say r.year, r.title so let's go look for capital again, 
+2:31 here you can see these results pretty cool, 
+2:35 I found a bunch of stuff about capital and the one that was actually cool 
+2:38 is this one from 2014 capital c. 
+2:40 Ok, so this is working pretty well,
+2:42 I think there is some rate limiting on the api actually
+2:45 and we may end up running into that as well 
+2:48 so that's going to be an interesting result, 
+2:50 but let's suppose something happens like our network goes down, right here, 
+2:57 so no network, turned it off, let's see how this bad boy runs now,
+3:01 I am looking for cats remember, cats and dogs was our first result 
+3:05 and uuu this is bad, so we have a request.exceptions.connection error, 
+3:11 the internal details are the connection pool with these settings failed 
+3:16 and this was caused by a new connection error 
+3:18 which was caused by da da da da da there is no network. 
+3:21 Ok, so what we need to do is write some code so that instead of doing this
+3:25 it just says it keeps going to this loop and it says hey,
+3:29 that didn't work so well, looks like your network is down. 
+3:32 If you turn it back on, we would be able to work again, 
+3:35 so let's go do that next. 
+

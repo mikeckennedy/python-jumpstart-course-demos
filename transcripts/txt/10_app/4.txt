@@ -1,0 +1,55 @@
+0:00 Now, I told you there is two things that we can improve here 
+0:03 and let's comment this out, let's first work on this part here,
+0:06 and in order to understand what is going on, 
+0:09 with what I am about to write, 
+0:11 there is a new concept which we have not talked about yet, 
+0:13 involving keyword arguments that's the orange or reddish values here, 
+0:20 where you name the parameters, they are not positional, they are named, 
+0:23 and dictionaries. 
+0:25 And, if I wrote a function that took keyword arguments, 
+0:28 I might have one positional parameter 1 and then I can say 
+0:31 there is a kwargs now this is just a name for a parameter,  it doesn't mean anything, 
+0:37 kind of like self is the convention but not required for classes 
+0:40 and I can tell Python **kwargs and that means this is going to be 
+0:46 sort of extensible set of parameters that can be passed 
+0:49 and is actually going  to come in such that this is a dictionary. 
+0:53 With that in mind, what you can do is 
+0:55 you can kind of do the reverse with dictionaries,
+0:58 so this takes a bunch of arguments that are written like this, 
+1:03 and turns it into a dictionary, 
+1:05 but if I have a dictionary I can turn this into a bunch of assignments like this
+1:08 during a method call, so I can come over here and say 
+1:11 I have this dictionary it's called result 
+1:13 and I would like to say title=results of title, poster=results of poster, and so on, 
+1:18 I can just say **result, that's it. 
+1:21 Now if I run it should operate exactly the same boom,
+1:25  it does, you can see title set, poster set and everything isn't that cool? 
+1:29 That's improvement one.
+1:31 Let's keep going, improvement two is 
+1:34 we saw with list comprehensions and generator expressions 
+1:38 that we don't really need to make a list and append to it 
+1:41 if all we want to do is build up this list, 
+1:43 so we can come over here and say you know what, 
+1:45 movies are actually going to be some kind of movie results object 
+1:51 that is generated from let's call this, something simple like m for m in results. 
+1:58 So we are going to basically loop over the results, get the dictionary m, 
+2:03 we are going to unpack it, into this movie results named tuple 
+2:07 and for each one of these we are going to build a list that has these items in here. 
+2:11 So again, this should operate exactly the same. 
+2:14 There you go, I can show you he whole thing, if I can type, 
+2:20 so you can see we have a list of movie results, 
+2:22 and just compare line 36 to 39 which if I really wanted to go crazy on you 
+2:27 I could write like this but I am not going to, right, 
+2:30 this would be valid Python if I wanted it to be, 
+2:33 but I much prefer to read in this style, compare that, those 3 lines, to this. 
+2:39 When you hear people talk about Pythonic code, 
+2:42 that means it's conforming to the sort of best and proper idioms
+2:46 that are part of the Python language, you see code written like this, 
+2:50 you are like oh these people are taking some other language idioms 
+2:54 like maybe C or Javascript or something like that 
+2:56 and just converting it over just such that it will run in Python 
+3:01 but not like deeply embracing the language, 
+3:04 down here, this is an example of something you might call Pythonic, I mean, 
+3:08 look how much more amazingly readable and awesome this is, 
+3:11 it's easy to maintain, now granted you've got to know Python a little better
+3:14 to understand what's going on, but once you do, oh how sweat. 

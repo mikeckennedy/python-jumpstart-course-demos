@@ -1,0 +1,41 @@
+ 0:00 Let's talk briefly about where are we going to get these movie information 
+0:03 and what we are going to search for anyway. 
+0:06 So we are going to use the OMDB API, 
+0:09 the open movie database API, so that's omdbapi.com 
+0:14 and this is a free service where we can go and do queries 
+0:17 against presumably imdb type of information 
+0:21 and you see it says the API looks like this, 
+0:24 and notice that you can get poster images as well, 
+0:28 so if you want to get the particular poster you are going to need an API key
+0:32 but for regular just queries you don't, 
+0:35 and down here you can see you can search specifically for a movie 
+0:38 by its title or by its imdb number, things like that,
+0:42 or you can just do sort of a keyword search, here like this, 
+0:45 search the movie title, now they have little examples down here, 
+0:48 this is pretty helpful and this is really only finding the title exactly 
+0:52 so our movie that I am really into right now is Capital C movie 
+0:57 I'll just search for that,
+1:01 so a friend of mine recommended this to me 
+1:03 because the whole Kickstarter thing I am doing
+1:05  and it's a really cool movie so let's see if we can find it over here 
+1:08 so we look for a Capital C and we can either get short results or long results, 
+1:13 so we can get Json or xml, json is the right answer by the way, 
+1:16 so we'll do a search and here is what the results that came back are 
+1:20 and then here is the actual url I would search for. 
+1:23 If I search for capital, you can see we actually got the results back here 
+1:26 as the title and the year and so on, 
+1:29 but if I just put capital here you'll see there is some other movie 
+1:32 literally just called Capital, but if I actually don't want to just look find by title 
+1:37 but I actually want to do a search by title, I'll get these results here, 
+1:40 so let's copy this, we are going to use that url 
+1:43 and we'll just basically stick something into there, whatever the user types, yeah? 
+1:48 Now, this is not very legible, it's kind of hard for me to wrap my mind 
+1:52 about what I am supposed to do with that, 
+1:54 so I come over to this json pretty printer and say show me a batter view of that, 
+1:58 aha, there we go, so there is some field and here it called search 
+2:02 which is going to come back as a list  in Python 
+2:05 we will parse it and then each one of these is going to come back like so,
+2:08 and when we parse that from json, 
+2:10 it will come back as a dictionary with a key of title, a key of year and so on. 
+2:13 And let's go get the searching. 
+

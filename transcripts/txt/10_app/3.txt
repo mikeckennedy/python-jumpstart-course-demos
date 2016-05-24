@@ -1,0 +1,83 @@
+ 0:00 Let's just play around with this api really quick, 
+0:02 get the general idea of it and then we'll structure into a proper program, ok? 
+0:07 So our url is going to look something like this 
+0:09 and we search for capital 
+0:11 and so let's make it really clear that there is some search text that goes right there. 
+0:16 So we'll say search=this and then we'll do a .format, with the search. 
+0:21 Now what we are going to do is we are going to work wit Request 
+0:23 we've used that a few times and it's been really great,
+0:26 we are also going to work with named tuples again, 
+0:28 so while I am here let me just type import collections. 
+0:31 So what I want to do is go and download this data 
+0:34 so we'll say r for response=request.get url. 
+0:38 Now, I should test our .status code and all those things 
+0:42 but we are just playing around, 
+0:45 so I am going to pull this back  and say 
+0:45 the data is going to come back in json format 
+0:47 so instead of taking that as a string, 
+0:49 we are going to convert that to dictionaries and lists 
+0:53 and primary sort of fundamental values like numbers and dates and so on. 
+0:58 So remember how the results come back,
+1:00 there is an outer json object, a dictionary, it has a key called Search, capital S
+1:06 is in this case instead of, and in there, there is an array, 
+1:08 and this is what we are really after. 
+1:10 So let's go over here and we'll say results and just write this 
+1:14 like it's going to work and then we can add error handling, later. 
+1:17 So we'll say data, and we want the search item 
+1:19 and that should be our list of dictionaries at the moment, 
+1:23 and we are going to upgrade them, so hold on, let's just print out, 
+1:26 let's just assume this is going to work, 
+1:28 let's say what's the length of the results, 10 movies, ok,
+1:32 well what is the first one that we found, 
+1:35 remember, we are searching for Capital, 
+1:38 there it is, we have some movie in 2013 
+1:41 and we can just pull this up I guess, and see what it looks like, 
+1:44 human capital, ok, 
+1:46 so that's and there it is, we have human capital at the top. 
+1:49 So this is ok but if you look at things like, if you look at them 
+1:54 like maybe we want to say order them by year, or something like this, 
+1:58 and if you look at a movie here,
+2:03 you'll see that we have a bunch of information 
+2:06 and we have like a year and that is a string. 
+2:09 So, we probably want to parse that, and again, 
+2:11 the only way to get to this is to actually type things like year as a string. 
+2:16 It would be much nicer to have like a proper named tuple 
+2:20 and we are going to create a named tuple from this dictionary 
+2:24 but we are going to do it in a really cool way, so let's define our movie result, 
+2:30 it's going to be a collection.named tuple again, 
+2:33 so for this to work in the cool and sleek way that I am proposing, 
+2:37 the values need to have exactly the same name as they do in the dictionary, 
+2:42 and they are not really matching Pythonic style with lower case elements, 
+2:46 upper case, more something like CSharp or C++ 
+2:50 but we are going to make it work here. 
+2:53 All right, so let's take this and instead of having this dictionary that we use strings against,
+2:58 we'll have a strongly typed element called movie results, right, 
+3:02 so let's roll this back and let's just loop remember this little list,
+3:05 let's loop over every one of these and convert it into a movie result, 
+3:08 so I am going to write this maybe the less pythonic way, in two axes, 
+3:13 in two dimensions if you will, 
+3:15 and then I'll show you two cool ways to improve this 
+3:18 so we are going to have a list, 
+3:21 we are going to say for result in results, plural, 
+3:24 now I want to create a movie, it's going to be a movie result 
+3:28 and in here we want to say things like title=results of title, 
+3:33 and we can just knock this out like so, 
+3:38 ok so now we have a movie result, 
+3:40 let me just print out m as we loop across these so let's run this, ok, 
+3:44 it looks like I misspelled something, hold on, here we go, 
+3:49 so we've gone to the url, 
+3:52 we've downloaded the data we've parsed the text into json, 
+3:57 we went to our json which was converted to a dictionary, 
+4:00 we pulled out the item that was under the key search 
+4:03 which turns out to be a list of subdictionaries, 
+4:06 each one of those we are calling the results 
+4:08 and they each have a title, poster, type and so on, 
+4:11 we are converting that or upgrading it if you will into a movie result 
+4:15 and if we print it we can see them there, that's great, 
+4:19 but what we wanted to do is actually store these into our list 
+4:22 so we'll say movies.append (m), and then down at the bottom, 
+4:27 let's just print out the first one again.
+4:32 Print movies of 0, awesome, 
+4:34 so you can see our movie result was converted properly 
+4:35 title is this poster is that and so on. 
+

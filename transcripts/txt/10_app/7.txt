@@ -1,0 +1,83 @@
+ 0:00 We've seen that we can stop the errors from crushing our app 
+0:04 and sending out a kind of meaningless error message, 
+0:07 let's try to improve this.
+0:09 So I can actually say I would like to handle specific types of errors, 
+0:12 and first of all, before I even get to that, like what was the problem, 
+0:16 I can't even tell them here what went wrong, 
+0:19 I can start by saying except exception as x, 
+0:23 this tells us what type of exception we want to catch 
+0:26 and then this is kind of like our context manager with block 
+0:29 creates the object that we re going to store 
+0:32 so I can come down here and say format, I can put the x here, 
+0:35 so now I have a little better information, so if I hit nothing, 
+0:38 it says Yikes, that didn't work, you must specify a string. 
+0:42 Turn off the network, it says Yikes, that wasn't good, 
+0:44 your http connection, da da da, what do you think users will feel 
+0:48 when they see that message, will they feel joy, 
+0:51 will they be like wow I love this program, it really communicates well with me, 
+0:55 like no, this is not a great message, 
+0:58 so let's change this, now we kind of need to know 
+1:01 what type that is and this is coming from requests 
+1:04 so let's just print out really quick the type here, 
+1:07 so when we enter nothing we get value error, when we enter something, 
+1:11 but the network is down we get request.exceptions.connectionerror, 
+1:15 so let's handle these differently. 
+1:18 Let me import this type up here, well say import, 
+1:21 so we'll import request.exceptions
+1:23 and down here I can say another except like I can say except
+1:27 request.exceptions.connectionerror, 
+1:29 there is a connection error that's built in in Python 
+1:32 and the built in to this is a different one, as let's say ce, 
+1:34 and then let me just say pass for a moment 
+1:37 then I could say except ValueError as ve: pass 
+1:42 and then I can have this down here, 
+1:44 so we could have sort of three levels of error handling, 
+1:47 we should log this or do other things, 
+1:49 but let's just print out some message, 
+1:51 well say cannot search your network is down. 
+1:54 Or host unreachable, I mean, there is it's not just your network right, 
+1:57 it could be something in the middle, 
+1:59 over here we could say print error your search string is invalid 
+2:04 and give us some more info, and down here we could finally just say 
+2:08 let's take away this little type thing that was just temporary, 
+2:11 I will just say error, and we don't really know why, right, 
+2:14 but here in these cases we know what connection error means, 
+2:17 that means that you couldn't search your network is down. 
+2:20 We know a value error means that means that string you entered is invalid 
+2:23 now notice this is great and it's not used, 2:26 if in this case we are not actually using it, we could, 
+2:29 but if we are not we can omit this section. 
+2:31 Ok, and it's just the exception type, 
+2:34 the error type that we are kind of get down here to drive this 
+2:36 so let's try this again, enter nothing, error you search string is invalid, let's fix that, 
+2:41 error your search string is invalid, you must specify a search string, 
+2:46 now if I enter cats remember network is still down,
+2:49 error cannot search your network is down. 
+2:52 So here is how we use  try except blocks to make our code reliable 
+2:57 and differentiate on particular errors, right, 
+3:00 so we try to do some search, it's possible that there is a value error 
+3:05 because we've given it some invalid data here. 
+3:08 That will throw the exception, 
+3:09 raise the exception and it will come in tests 
+3:11 and it says is the type derived from,
+3:14 is it a connection error from request 
+3:16 or is it a more specific derived class, answer is no, 
+3:19 and it'll say is it derived from more exactly value error, yes, 
+3:22 and so it will run this code and this is it, if it's none of those, 
+3:26 it will run this exception, 
+3:28 now exception is not the most base type but there are certain things 
+3:32 that you don't want to catch that are below exception, 
+3:35 things like control c right, if you catch,
+3:39 if you just did a straight up except 
+3:41 like here we could say, for a moment, like this, 
+3:47 so if I come down here and I hit this, 
+3:49 I get some error if I search for cats it should work, 
+3:52 the network is back, see I am trying to stop the program, it says no, 
+3:57 you will not stop this, right, so this is actually this is bad, bad news, 
+4:02 you don't want to catch too broad of an exception, right, 
+4:05 but here is a pretty good place to go. 
+4:08 Right, let's run our app one more time just to make sure it works, 
+4:11 ok let's search for capital c boom, there is our results, capital c, 
+4:17 now if we enter nothing we should get the error, 
+4:19 if we enter x we should be out of here. 
+4:22 That's error handling in Python. 
+

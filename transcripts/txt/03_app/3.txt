@@ -115,7 +115,7 @@
 4:57 So now if we run it, 
 4:58 we should get it to work much better. 
 5:02 Now it is still not going to work, 
-5:03 in the end I think it may crush,
+5:03 in the end I think it may crash,
 5:06 it may make it to the end, let's see. 
 5:08 Yeah. So we made it farther,
 5:12 just down here we haven't quite finished this, 

@@ -20,7 +20,7 @@ def get_birthday_from_user():
 
 def compute_days_between_dates(original_date, now):
     date1 = now
-    date2 = datetime.datetime(now.year, original_date.month, original_date.day)
+    date2 = datetime.datetime(original_date.year, original_date.month, original_date.day)
     dt = date1 - date2
     days = int(dt.total_seconds() / 60 / 60 / 24)
     return days

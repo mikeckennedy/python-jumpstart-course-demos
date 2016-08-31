@@ -23,7 +23,7 @@
 1:01 CSharp, Swift, those types of languages, they all use curly braces 
 1:06 and when you open the curly brace that begins a block of code, 
 1:09 and when you close curly brace that block code is now done. 
-1:12 Then work this way in Python, 
+1:12 It doesn't work this way in Python, 
 1:14 it's all about the indentation, 
 1:15 so you can see the gray block which is just the overall program 
 1:19 and we have two functions we are defining, 

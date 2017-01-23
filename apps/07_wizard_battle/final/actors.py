@@ -23,7 +23,7 @@ class Wizard(Creature):
         ))
 
         my_roll = self.get_defensive_roll()
-        creature_roll = creature.get_defensive_roll()
+        creature_roll = creature.get_defensive_roll
 
         print("You roll {}...".format(my_roll))
         print("{} rolls {}...".format(creature.name, creature_roll))

@@ -1,4 +1,3 @@
-	
 0:00 Now, before we move on to our next application
 0:03 let's take a quick tour of PyCharm. 
 0:05 So, PyCharm has so many features,
@@ -6,7 +5,7 @@
 0:10 But let's just take a moment and hit the highlights.
 0:12 So on the left over here we have our project, folder, 
 0:15 and this can be quite complex,
-0:17 in real apps you might find mini subdirectories,
+0:17 in real apps you might find many subdirectories,
 0:20 multiple files, all sorts of stuff, we'll get to that later.
 0:23 But here we just have our directory and our program.py, 
 0:27 and it actually shows the external libraries that are set up
@@ -15,8 +14,8 @@
 0:36 and Chameleon which is a web templating framework
 0:39 and mailchimp for managing subscribers, things like that.
 0:43 Not super important for us now,
-0:44 but this sort of lets you get at your active Python environment,
-0:48 we can also go over to the structure,
+0:44 but this sort of lets you get at your active Python environment.
+0:48 We can also go over to the structure,
 0:50 and the structure for this app is frankly boring,
 0:53 because it just has a few variables and that's it,
 0:56 but if we had functions which were using classes
@@ -29,17 +28,17 @@
 1:17 you can see there is actually two of them running,
 1:19 that's kind of a problem, we'll talk about how to fix that.
 1:24 So we can come over here, we can run it,
-1:25 we can stop the running once you see this one as a green dot
-1:28 because it's running, so we can stop this
-1:31 we can also have to do so we could come over and put a comment;
-1:35 comments in Python start with hash so I could say,
-1:37 to do "this needs cleaned up",
-1:41 something like that and I could say something like to do.
+1:25 we can stop the running one, you can see this one as a green dot
+1:28 because it's running, so we can stop this... it's all good.
+1:31 We can also have TODO's so we could come over and put a comment;
+1:35 comments in Python start with "#" hash so I could say,
+1:37 # TODO "this needs cleaned up",
+1:41 something like that and I could say something like TODO.
 1:45 All right, so now if you look down here
-1:47 you can see it actually shows us our to dos
+1:47 you can see it actually shows us our TODO's
 1:49 PyCharm highlights them very nicely up here.
 1:51 Take those back out but that's what this section is for.
-1:54 Here is just a Python console you can
+1:54 Here is just a Python console you can...
 1:57 as if you typed Python in the terminal or the command prompt,
 2:00 here is literally a terminal,
 2:03 and here is the version control that we talked about.
@@ -54,7 +53,7 @@
 2:26 and like it do all sorts of cool stuff.
 2:28 Finally we have sort of run, debug and manage
 2:31 version control shortcuts up here.
-2:34 Up here, we can look at the configuration
+2:34 We come up here, we can look at the configuration
 2:36 you can see we can actually pass parameters like
 2:40 if I want to just hard code a name and pass it like this,
 2:43 this would be passed to our program when it runs,
@@ -66,7 +65,7 @@
 2:59 that was kind of weird so we can check off this single instance only
 3:02 and that actually fixes that problem,
 3:04 so you only ever have one running at a time.
-3:07 Now when I run it- if it's running and I try to run it again
+3:07 Now when I run it, if it's running and I try to run it again
 3:09 it will say we are going to restart it for you,
 3:12 so I often say don't bother me with that just run it again whenever I ask, ok?
 3:17 So like I said, there are many things you can do with PyCharm,
@@ -74,5 +73,4 @@
 3:23 stuff with managing virtual machines,
 3:26 all kinds of stuff that we just don't need to get into right now
 3:29 but what you saw should give you a really good jumpstart
-3:32 so you can be effective with PyCharm right away. 
-
+3:32 so you can be effective with PyCharm right away.

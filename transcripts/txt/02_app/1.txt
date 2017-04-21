@@ -1,4 +1,3 @@
-
 0:00 Hello and welcome to app number 2
 0:02 this time we are going to build a game,
 0:04 a guess what number I am thinking of game,
@@ -17,7 +16,7 @@
 0:35 Well, we are going to focus on boolean statements
 0:38 and switching between code blocks.
 0:41 So we are going to start up by talking about boolean expressions,
-0:45 things like x>y, y is nothing,
+0:45 things like x > y, y is not nothing,
 0:49 the users entered some valid text those kinds of things.
 0:52 And we'll use that in two basic places,
 0:54 one is going to be an if, else if categories
@@ -34,7 +33,7 @@
 1:16 to keep going until the numbers match.
 1:19 Closely related to this boolean concept
 1:22 is something I'm calling truthiness.
-1:24 You'll see that objects within Python are 1:27 
+1:24 You'll see that objects within Python are embued 
 1:26 with a truth or falseness
 1:29 we'll leverage that as a key building block in our boolean expressions.
 1:32 We'll also learn about type conversion
@@ -47,5 +46,4 @@
 1:50 as a way to compose our app into more
 1:52 understandable and maintainable building blocks
 1:55 and part of that is going to be understanding code blocks
-1:57 which are a little let's say unique in Python. 
-
+1:57 which are a little, let's say unique in Python.

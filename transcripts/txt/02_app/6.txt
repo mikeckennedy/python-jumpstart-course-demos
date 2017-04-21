@@ -1,10 +1,9 @@
-
 0:00 So we have our app working
 0:02 but the user feedback could be a little better
 0:04 let's go down here and try to improve
 0:06 this message we sent to the user
 0:08 instead of just too low, let's say
-0:09 something like your guess of- and we can put in this number
+0:09 something like your guess of... and we can put in this number
 0:14 this guess they had here
 0:16 we saw that we could do this by combining strings by saying guess
 0:19 so maybe you'll think well this is a way I can do this here
@@ -45,13 +44,13 @@
 1:56 enter your name, my name is Michael,
 1:58 enter a guess, I am going to put 0,
 2:00 sorry Michael your guess of 0 was too low.
-2:03 Now, we are just scratching the surface of the power of this format method,
-2:08 we can if we wanted to switch the order here,
+2:03 Now, we are just scratching the surface of the power of this format method.
+2:08 We can if we wanted to switch the order here,
 2:12 if we specify the place holders in the string
 2:16 in the same order as they are specified as arguments there
 2:18 we can actually omit the number
 2:21 now this will say sorry name
-2:23 your guess of- whatever the number was, was too low.
+2:23 your guess of... whatever the number was, was too low.
 2:26 We can put in format specifiers here to say
 2:28 I'd like to separate this with commas or convert it to currency,
 2:33 or all sorts of sort of format specifiers
@@ -63,20 +62,19 @@
 2:47 so your guess was too high, and finally,
 2:49 we'll just say something nice about winning
 2:53 excellent work so and so, you won
-2:57 it was something like this, right
+2:57 it was something like this, right?
 2:59 so excellent work, whatever the name is and you won
 3:01 it was whatever the guess was.
 3:03 So, let's play the game again,
 3:05 all right, what's your name, now I've got to enter my name,
 3:07 it's Michael,
-3:08 I am going to guess 50- too high,
+3:08 I am going to guess 50- wow 50 was too high,
 3:11 25- too low,
 3:12 35, 40,
 3:14 45
 3:16 47,
 3:17 what do you think,
 3:19 46, chances are likely, 
-3:21 excellent work Michael, you won, it was 46.
+3:21 YES! excellent work Michael, you won, it was 46.
 3:24 See how we can use string format to really simplify and clarify
-3:28 how we convert values into strings. 
-
+3:28 how we convert values into strings.

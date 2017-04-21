@@ -1,5 +1,3 @@
-
-
 0:00 One of the fundamental components of any programming language
 0:03 is the ability to make decisions,
 0:05 decide to go down one path or the other
@@ -7,7 +5,7 @@
 0:09 And in Python, this is the if, elif, else block,
 0:12 so let's look at this co de sample we have here.
 0:15 We have some command we are trying to get from the user,
-0:17 imagine this is a command line app that can enter commands
+0:17 imagine this is a command line app you can enter commands
 0:20 to run or execute at this point in our application.
 0:23 So we are going to ask the user to enter
 0:25 either L or X but of course they can enter anything, right,
@@ -34,7 +32,7 @@
 1:17 And of course, this is a key building block 
 1:19 for our game to decide if the number is too high or too low. 
 1:23 So, we've seen that you can do equality test, ==, 
-1:26 we can also do less than, greater than, 
+1:26 we can also do less than "<", greater than ">", 
 1:29 these types of comparisons that are pretty conceptually straightforward. 
 1:33 But in Python, you can test any object, 
 1:36 anything that is a variable you can put into an if statement 
@@ -45,7 +43,7 @@
 1:49 for conciseness which I am calling truthiness. 
 1:52 So the rules are like this, 
 1:53 there is a set of defined things that are false, 
-1:55 obviously the word False is it's a false, 
+1:55 obviously the word False capital F is itself false, 
 1:59 but also collections, lists, sets, dictionaries, 
 2:04 and so on that are empty, 
 2:06 by the fact that they are empty,
@@ -60,5 +58,4 @@
 2:30 So, if you are not in this short clear set of things that are defined to be false,
 2:34 then it evaluates to true. 
 2:36 So we'll see a lot of code leveraging this concept
-2:38 around loops, around conditionals, and so on. 
-
+2:38 around loops, around conditionals, and so on.

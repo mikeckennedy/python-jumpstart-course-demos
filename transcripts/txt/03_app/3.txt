@@ -1,11 +1,10 @@
-
 0:00 Now we have the basic structure
 0:02 the basic shape and building blocks of our application
-0:05 let's fill them out
+0:05 let's fill them out.
 0:05 Let's start at the beginning which is a super easy
-0:08 we are just going to put our standard print statements
-0:13 there you go, nothing new there, 
-0:16 now the next thing is get the birthday from the user. 
+0:08 we are just going to put our standard print statements.
+0:13 There you go, nothing new there. 
+0:16 Now the next thing is get the birthday from the user. 
 0:19 And what we need to return from this method
 0:22 is an actual datetime, 
 0:24 not just some text or something like that
@@ -17,11 +16,11 @@
 0:40 So we are going to ask the user when were they born 
 0:42 and then we are going to use our input 
 0:44 to get the year, the month and the day. 
-0:48 So we'll say year, like this, and we'll give it a little- 
+0:48 So we'll say year, like this, and we'll give it a little...
 0:53 now the next thing I want to do
 0:54 is kind of the same thing but for the month 
 0:56 and I could copy and paste this, I could retype it, 
-0:58 or in PyCharm I hit command D 
+0:58 or in PyCharm I hit command+D 
 1:00 and it will just duplicate whatever you have selected,
 1:02 that is super handy, 
 1:04 then I'll say month, I'll change this to be appropriate here, 
@@ -42,8 +41,8 @@
 1:49 that's just the module we've imported, 
 1:50 now the next thing is just a little confusing when you first see it, 
 1:53 there is datetime.datetime, 
-1:56 ok, so what is going on here- 
-1:58 this is the module that we imported, 
+1:56 ok, so what is going on here? 
+1:58 This is the module that we imported, 
 2:00 and within there, there is several things that represent dates and times
 2:04 there is datetime, which represents 
 2:06 a day on the calendar and a specific time on that day, 
@@ -83,8 +82,8 @@
 3:33 and this is just for me to organize my thoughts, right
 3:37 to sort of group this into smaller building blocks 
 3:40 one way we can trigger this to work
-3:42 is we can just call the main method at the end of the script,
-3:44 that's not technically the best way of doing it,
+3:42 is we can just call the main method at the end of the script.
+3:44 That's not technically the best way of doing it,
 3:47 but let's just do this now and we'll come back
 3:50 and we'll improve upon it.
 3:52 So now if I run it, you can see it says
@@ -95,13 +94,13 @@
 4:09 Why is it not happy,
 4:09 well it's a type error and it says 
 4:11 an integer is required but we've got a string. 
-4:14 Where is that- so it turns out that 
+4:14 Where is that? So it turns out that 
 4:16 these have to be numbers, 
 4:18 and they are not numbers, 
 4:19 they are things that have come back 
 4:21 from input which are always strings 
-4:23 so we need to convert them right, 
-4:25 so that is the one thing that was missing here, 
+4:23 so we need to convert them... right? 
+4:25 So that is the one thing that was missing here, 
 4:27 and we can do this in several steps 
 4:29 or we can just sort of combine it like this, 
 4:33 say int, recall that we convert from a string to an integer 
@@ -135,5 +134,4 @@
 5:44 so let's go over here and just put in some numbers, 
 5:48 and you can see we've actually generated 
 5:50 a datetime object and we've returned it here 
-5:53 and it's- ok, so it looks like this step is totally working.
-
+5:53 and it's... ok, so it looks like this step is totally working.

@@ -1,4 +1,3 @@
-
 0:00 So I hope you have a much better understanding 
 0:03 of how to work with dates, 
 0:04 and even how to work with other modules 
@@ -20,7 +19,7 @@
 0:49 when we are doing the regular execution as well. 
 0:52 We can step over the current line using F8 
 0:56 or we can step into the function using F7, 
-0:59 or back out using shift F8. 
+0:59 or back out using shift+F8. 
 1:02 So let's do F7 step in here, 
 1:05 here is our print header, and for the moment
 1:07 let's switch over the console,
@@ -62,7 +61,7 @@
 2:32 which is very cool, we are going to return this back, 
 2:33 so we'll step down, now our variables change, 
 2:36 now our birthday is this, 
-2:38 and now is its time, excellent, 
+2:38 and now is this time, excellent, 
 2:42 so we'll step in here, one more time, 
 2:45 so we command the compute the days between dates, 
 2:47 and we got original date, 
@@ -79,11 +78,10 @@
 3:14 we saw it's negative 59 days come back here, 
 3:17 and compute that and see the debugger 
 3:19 showing on the right of our code, all the various values
-3:22  and last thing is to just print out those pieces and off it goes. 
+3:22 and last thing is to just print out those pieces and off it goes. 
 3:28 So excellent, what have we done,
 3:29 we worked with the datetime module, 
 3:32 broke our code into reasonable small functions, 
 3:34 anyone of these little functions is super easy to understand, 
 3:37 and it's also easy to put together down here a main method. 
-3:41 I hope you learned a lot from building this birthday app. 
-
+3:41 I hope you learned a lot from building this birthday app.

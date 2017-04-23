@@ -3,11 +3,11 @@
 0:09 have Python be this so called "batteries included" language 
 0:13 where if there is some sort of feature that you need, 
 0:15 there is a few lines of code you write and boom, you have it. 
-0:18 Typically, it you'd have to import some amazing package 
+0:18 Typically, it've to import some amazing package 
 0:22 that's going to solve your problem. 
 0:23 Now we saw there is three ways that we can import,
-0:27 there is actually more than that but I think this is enough to get us started, 
-0:30 we can say import, name of the package or module, 
+0:27 there is actually more than that but I think this is enough to get us started. 
+0:30 We can say import, name of the package or module, 
 0:34 and that both allows and requires us to maintain the namespace 
 0:38 down below you can see os.path.exists,
 0:41 or we can import individual entities, functions, 
@@ -20,5 +20,4 @@
 1:00 that's not such a good idea you kind of get into name conflicts 
 1:04 and it's not very obvious what you are actually getting from that module 
 1:06 and where are you using it below, 
-1:09 that would still let you write style to code below. 
-
+1:09 that would still let you write style to code below.

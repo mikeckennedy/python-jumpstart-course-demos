@@ -6,8 +6,8 @@
 0:19 like hey here is all the values, here is how you typically use it, 
 0:23 here is a link to the documentation and so on. 
 0:26 We would like our journal code to look like that 
-0:28 and it turns out it's super easy, 
-0:30 so if we come over here and we enter a string, 
+0:28 and it turns out it's super easy. 
+0:30 So if we come over here and we enter a string, 
 0:35 on its own line right by itself here, 
 0:38 that will actually be the documentation 
 0:41 and there is a format that lets you describe the return values 
@@ -39,9 +39,9 @@
 2:17 and hit F1 and now it pulls it up and says 
 2:20 this method creates and loads journal and guess what
 2:22 the name parameter, this is the base name of the journal
-2:24 and the return value that's a new journal. 
-2:27 So now you have proper documentation 
-2:30 now if we come here to Python console and we say import journal, 
+2:24 and the return value that's a new journal, Woho!!. 
+2:27 So now you have proper documentation. 
+2:30 Now if we come here to Python console and we say import journal, 
 2:34 I can write things like help (journal.load) and when I hit enter
 2:39 you can see just like we got into UI there
 2:42 we also get the text version so if you are working in the console or the terminal 
@@ -54,4 +54,3 @@
 3:10 and now if I were to come down here and do that import again 
 3:13 or come over here to the top and look at the journal, 
 3:17 I can ask for help and it actually gives me module level documentation as well. 
-

@@ -1,8 +1,8 @@
  0:00 Now that we have installed Requests and Beautiful Soup, 
 0:03 it's time to use them in our application 
 0:05 and this step is going to be surprisingly easy 
-0:09 this is one of the reasons that working with Python is just so super awesome 
-0:12 ok, so you can see on line 23 I've written Requests
+0:09 this is one of the reasons that working with Python is just so super awesome. 
+0:12 Ok, so you can see on line 23 I've written Requests
 0:16 and this is how you get started with Requests,
 0:18 but there is an error and there is a red underline,
 0:21 but it's the kind the PyCharm can fix, 
@@ -16,18 +16,18 @@
 0:42 but there is at the top import Request. 
 0:44 Right, so I encourage you to let PyCharm help you. 
 0:47 Now we can say get and you can see it takes a URL, some parameters, 
-0:50 some qwargs, that's keyword arguments, 
+0:50 some kwargs, that's keyword arguments, 
 0:54 all we really need to do for this simple case is just put the url here 
 0:57 and we'll say the response that comes back is whatever goes there. 
 1:02 Let's start by making sure that we get 
 1:04 a good status code from the web server
 1:07 we want a response code of 200, 
 1:09 response code of 404 or 500 not so super awesome, 
-1:12 so let's just print out the response.status code.
+1:12 so let's just print out the response.status_code.
 1:17 And so we get, so again it's asking what is my zip code 
 1:20 so I'll say it's 01010, which is as we saw a Massachusetts 
-1:24 go, wait for a second for the web server to respond and 200, perfect, 
-1:28 so that means we are talking to this web server, 
+1:24 go, wait for a second for the web server to respond and 200, perfect.
+1:28 So that means we are talking to this web server, 
 1:31 you saw there is a little delay, 
 1:33 that is just the web server actually trying to generate the full page, and that's great, 
 1:37 but what we really want is the HTML. 
@@ -44,7 +44,7 @@
 2:15 and whatever came back from web server, let's see what that is. 
 2:20 And ta-da, we get just the top little bit of the HTML page 
 2:25 and you can see already perfect, we are getting Brimfield Massachusetts 01010, 
-2:29 this slicing concept is really powerful, 
+2:29 OH! this slicing concept is really powerful, 
 2:32 and there is a lot of ways to use it, 
 2:34 I could say I want the 0th to 250th item like this, 
 2:37 or when you start at the beginning you can omit this, 
@@ -61,11 +61,10 @@
 3:08 so you see we are just throwing it away right now, 
 3:11 we'll say this HTML equals, and we'll have gotten HTML from the web, 
 3:14 now I don't feel like we need this comment anymore, 
-3:16 get HTML from the web, call the function get HTML from the web 
+3:16 get HTML from the web, to call the function get HTML from the web 
 3:19 that's the beauty of functions and choosing good names, 
 3:22 so the next thing we need to d is parse the HTML there is get part, 
 3:25 this was Requests, there is parse part, that is Beautiful Soup. 
 3:30 Before we get to Beautiful Soup though, 
 3:33 this concept of slicing is super important 
 3:35 and let's take a moment to just explore that further. 
-

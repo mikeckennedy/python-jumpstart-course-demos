@@ -7,7 +7,7 @@
 0:23 so here you can see and there is dev app here we've got an id of location, 
 0:29 so we would start with location, 
 0:31 and then we have this contained within in H1 
-0:34 and then there is actual piece that we want. 
+0:34 and then there is actual element that we want. 
 0:37 So we could write some code that comes in here and grabs this element as div 
 0:40 and looks inside of there for H1 
 0:42 and within the H1 it's going to grab just the text. 
@@ -46,5 +46,4 @@
 2:43 so we have them right here to work with while we are building this method out. 
 2:46 So the next thing to do will be to use Beautiful Soup 
 2:49 it'll actually do something kind of like we did with jQuery 
-2:52 and the browser but we are going to do it in memory in Python. 
-
+2:52 and the browser but we are going to do it in memory in Python.

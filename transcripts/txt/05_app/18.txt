@@ -17,5 +17,4 @@
 0:55 I believe it might be a batch file. 
 0:57 But, you call activate and then your command prompt changes
 0:59 your path changes so that all the Python tools like Python itself
-1:03 pip and so on now run exclusively out of that environment. 
-
+1:03 pip and so on now run exclusively out of that environment.

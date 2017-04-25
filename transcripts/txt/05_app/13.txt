@@ -12,7 +12,7 @@
 0:31 so let's work on cleanup all these pieces of text first 
 0:34 and then we'll pull out just the city and state. 
 0:37 So we can come down here and say 
-0:39 that the location= cleanup text of the location
+0:39 that the location= cleanup_text of the location
 0:43 Now this is a method that we are going to write,
 0:45 not sure it justifies its own method but maybe it does, 
 0:49 so we are going to come down here and say 
@@ -23,7 +23,7 @@
 1:04 remember if they are empty or none 
 1:07 they will be false so we'll just return text, 
 1:10 but if they are not empty then we can do some processing, 
-1:13 we can say text=text.strip and strip is a built in method to the string class 
+1:13 we can say text = text.strip() and strip is a built in method to the string class 
 1:18 that will take all the white space tabs, space, new line, \\ end type of things, 
 1:24 off of the front and the end, there is also an L strip and R strip, and so on 
 1:28 so we are going to modify this and then we'll return the text here. 
@@ -84,5 +84,4 @@
 4:23 do a little cleanup on the code, run it, all right, go in, 
 4:28 and perfect look at that, we have partly cloudy, 
 4:33 the temperature is 8.6 degrees, 
-4:35 scale is Celsius and the city and state are Portland, Oregon. 
-
+4:35 scale is Celsius and the city and state are Portland, Oregon.

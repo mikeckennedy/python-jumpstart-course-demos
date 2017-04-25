@@ -5,8 +5,8 @@
 0:10 national weather service, things like this 
 0:12 but the Weather Underground is kind of different 
 0:15 and see, all of these green dots, these are all kind of in my neighborhood 
-0:18 where I am in Germany right now
-0:20 these are all personal weather stations that individuals have put at their house 
+0:18 where I am in Germany right now.
+0:20 These are all personal weather stations that individuals have put at their house 
 0:24 and then linked up to weather underground
 0:26 and so if you live right here, you can actually get the report from where is that, 
 0:31 a few blocks down the street so this is really cool. 
@@ -36,7 +36,7 @@
 1:49 this is only for demonstrating the sort of pip concepts. 
 1:54 So for starters, let's grab this url, and head over to PyCharm. 
 2:00 So the next thing we are going to so is get the HTML from the web
-2:02 so let's write the method, def get html from web,
+2:02 so let's write the method, def get_html_from_web(),
 2:09 and we have the url, it's going to be here like so, 
 2:12 now obviously we don't want to always get the weather in Portland Oregon, 
 2:15 maybe we want to let the user enter it, just like they did up here, 
@@ -68,5 +68,4 @@
 3:39 use the pip tools and download install 
 3:40 and then we can use the weather app, 
 3:43 that is one of the core concepts in this application 
-3:45 so let's stop for a minute and have a look at it. 
-
+3:45 so let's stop for a minute and have a look at it.

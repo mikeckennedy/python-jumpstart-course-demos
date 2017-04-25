@@ -25,7 +25,7 @@
 1:17 I have to know what that something is but in PyCharm I don't,
 1:19 I can hit plus and say I am interested in Requests 
 1:23 and here is not just Request itself with who the author is, Kenneth Reitz, 
-1:28 does amazing work and has his email and the link to the home page, 
+1:28 does amazing amazing work and has his email and the link to the home page, 
 1:33 but it also has all the other ones like here is Request cloud auth 
 1:37 and Requests for Facebook, 
 1:39 and Requests for Facebook Python 3 and so on, 

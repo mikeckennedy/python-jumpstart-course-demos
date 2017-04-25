@@ -33,8 +33,8 @@
 1:37 and in this package index there are many thousands of packages or libraries 
 1:43 that you can download and very easily add to your application. 
 1:48 The tool that we are going to use to do this is called pip, 
-1:50 so we'll talk about how you get that, how you use it, 
-1:53 the two extra features that we need to bring in 
+1:50 so we'll talk about how you get that, how you use it. 
+1:53 The two extra features that we need to bring in 
 1:56 as an external package for our app are HTTP client, 
 1:59 how do I go out to the internet and grab some data and download it, 
 2:03 and screen scraping, how do I take semi structured 

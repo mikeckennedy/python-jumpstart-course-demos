@@ -21,7 +21,7 @@
 1:09 how would I know what I need? 
 1:11 In this list, what is in this list is required to run the weather app? 
 1:15 Well, you and I know because we just wrote it
-1:17 we know that requests is needed and up at the top BS 4 is needed.
+1:17 we know that requests is needed and up at the top bs4 is needed.
 1:22 But, there is nothing here that makes it clear what is needed
 1:27 now there is ways to do that and with packaging
 1:29 and packaging up your apps in certain ways
@@ -49,12 +49,12 @@
 2:35 in this case we need to type virtual env as a program, 
 2:37 if you want to run the other one 
 2:40 you might have to run it as a module and through Python directly
-2:42 so it's something like Python 3- virtual env. 
+2:42 so it's something like Python 3-env space virtualenv. 
 2:49 Like so, but we don't have to do this, 
-2:51 we can just type virtual env, right, 
+2:51 we can just type virtualenv, right, 
 2:55 so what we are going to do now is we want to tell virtual env go and create 
 2:58 a clean empty Python environment, Python 3, for us to work with. 
-3:02 So we'll say virtual env and then we'll just give it a folder name
+3:02 So we'll say virtualenv and then we'll just give it a folder name
 3:05 so let's call this weather. py3 
 3:08 just to make it more obvious this is for the weather app and it's Python 3. 
 3:13 You can see that it's copy the Python 3 executable over and it's also setup pip
@@ -147,8 +147,7 @@
 7:52 into that environment- lovely.
 7:55 So that brings this application to a close 
 7:57 I hope you've learned a lot and had a lot of fun doing it, 
-8:00 we are just going to reenter ??? one more time, 
+8:00 we are just going to re-iterate one more time, 
 8:02 remember, you should try to use APIs and verify 
 8:06 the usage rights when you are doing screen scraping 
-8:09 but it is a really cool way to get data into your app. 
-
+8:09 but it is a really cool way to get data into your app.

@@ -6,9 +6,9 @@
 0:14 but depending on the order on which you've installed Python 
 0:17 the way your path is setup you may end up with pip 
 0:20 that manages the packages from the Python 2 interpreter, 
-0:22 or you may end up with pip 3 which manages the packages for Python 3 
-0:27 so you want to be very careful on ask which one do I have 
-0:30 it turns out you can see here I have the one from 3.5, 
+0:22 or you may end up with pip 3 which manages the packages for Python 3. 
+0:27 So you want to be very careful on ask which one do I have. 
+0:30 It turns out you can see here I have the one from 3.5, 
 0:34 before I installed 3.5 on OS X I believe I just typed pip I got pip version 2,
 0:39 if you want to make sure you are working with pip 3 on OS X or Linux 
 0:43 you can just say pip 3, and that will always give you 
@@ -42,14 +42,13 @@
 2:21 that's a system level location, 
 2:23 so for this case we need to do sudo and enter a password, 
 2:29 again on Windows that would be running a command prompt as admin. 
-2:33 
 2:36 Excellent, so now we will get rid of that warning, 
 2:39 we'll be sure to be using the latest pip 
 2:41 the other package that we are going to need is Beautiful Soup. 
 2:45 We'll talk more about what Beautiful Soup is 
 2:46 but while we are here let's go ahead and install it, 
-2:48 so we'll say pip 3 install Beautiful Soup now be careful, 
-2:53 there is Beautiful Soup and a newer which is Beautiful Soup 4, this is one you want.
+2:48 so we'll say pip 3 install beautifulsoup now be careful, 
+2:53 there is beautifulsoup and a newer which is beautifulsoup4, this is one you want.
 2:58 I already happen to have it installed, 
 3:01 so let's see if there is an upgrade for it.
 3:04 Nope, it's already up to date, I have the latest version, that's excellent.

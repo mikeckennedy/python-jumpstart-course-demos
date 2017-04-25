@@ -40,11 +40,10 @@
 2:04 you may not have pip and if you have an old version of Python 3 
 2:09 before 3.3 you also might not have Pip 
 2:12 so you can use that link above to install it 
-2:14 but if you have Python 3.3 or above you already have pip installed, that's excellent, 
-2:19 the other one is instead of using the public package repository on PyPi 
+2:14 but if you have Python 3.3 or above you already have pip installed, that's excellent.
+2:19 The other one is instead of using the public package repository on PyPi 
 2:23 you can actually create your own hosted internal package repository 
 2:28 and use pip to install and manage 
 2:31 say maybe private packages for within your company, 
 2:34 that's a pretty interesting way to manage libraries and packages 
-2:37 across teams in large companies. 
-
+2:37 across teams in large companies.

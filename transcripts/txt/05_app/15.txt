@@ -8,8 +8,8 @@
 0:22 there is a type called named tuples 
 0:24 and we can create whatever named tuple we want, 
 0:28 and it will be the tuple that knows how weather reports look, 
-0:31 so I'll call this a weather report, and just make this part up,
-0:36 I'll say this weather report is a collections.named tuple 
+0:31 so I'll call this a WeatherReport, and just make this part up,
+0:36 I'll say this weather report is a collections.namedtuple() 
 0:40 and its name is going to be this and then the next item that we put in here 
 0:43 is actually a comma separate list of the names of the values, 
 0:47 so let's say it's going to have a condition, it's going to have a temp
@@ -26,7 +26,7 @@
 1:25 All right, so maybe I remember that right,
 1:28 but there is a little safer way to do this so it's more obvious
 1:31 and this is using keyword parameters 
-1:33 so I can say the condition or the cond=the condition and the temp=temp scale, 
+1:33 so I can say the condition or the cond=condition and the temp=temp scale, 
 1:42 I guess I didn't do a great job choosing different names, the location=loc. 
 1:46 so now we've got our report and we are going to return our report, 
 1:49 so if I run this code again, I will probably get different output, 
@@ -51,5 +51,4 @@
 3:04 That is beautiful, the temp in Portland Oregon is 8.6 degrees Celsius and mostly cloudy
 3:12 all right, so that pretty much wraps up our weather app
 3:14 let's come back and look at this tuple concept a little deeper
-3:17 it's one of our core concepts. 
-
+3:17 it's one of our core concepts.

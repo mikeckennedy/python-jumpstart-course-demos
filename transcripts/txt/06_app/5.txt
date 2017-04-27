@@ -3,7 +3,7 @@
 0:06 Now we were looking to them over here in PyCharm 
 0:09 but obviously the users won't be running this in pyCharm 
 0:12 and we do kind of say hey we downloaded your cats 
-0:14 but let's show them to the- now we have to keep in mind
+0:14 but let's show them to them. Now we have to keep in mind
 0:17 we are working in a terminal app 
 0:19 so we kind of can't really show it like on a cool web page or in some kind of window,
 0:24 the best I think we can hope for is maybe showing 
@@ -32,8 +32,8 @@
 1:39 we want to launch another process from our application 
 1:42 and we do that with the sub process module, 
 1:45 now like all of these modules we have to import them, 
-1:47 PyCharm will do that for us thank you very  much, 
-1:49 and then it has a call method, 
+1:47 PyCharm will do that for us thank you very much, 
+1:49 and then it has a call() method, 
 1:51 and call takes you can see there is a few options here, 
 1:55 call takes an array strings, 
 1:56 the first string is going to be the name of the program,
@@ -52,10 +52,9 @@
 2:34 So we've successfully displayed our cats to the user, 
 2:37 granted we have pretty simple mechanism for that 
 2:40 because we have a simple terminal app, but nonetheless, pretty cool, 
-2:43 it shows you how to work with subprocesses, in an incredibly easy way. 
+2:43 it shows you how to work with sub-processes, in an incredibly easy way. 
 2:47 Now the last thing to do is to say well, if I run this on Windows, 
 2:50 or I run this on Linux, 
 2:53 this is not going to work so well, 
-2:55 let's actually take it and run it on Linux and watch it crush 
-2:58 and then we'll fix it over there. 
-
+2:55 let's actually take it and run it on Linux and watch it crash 
+2:58 and then we'll fix it over there.

@@ -1,8 +1,8 @@
  0:00 Here we are in Ubuntu, 
 0:02 let's try to call open and pass the folder and see what happens. 
-0:05 Couldn't get a file descripter referring to the console, 
+0:05 Couldn't get a file descriptor referring to the console, 
 0:11 that's not a super user experience, 
-0:13 so what are we going to do- well, like I said, 
+0:13 so what are we going to do. Well, like I said, 
 0:16 we need to run a different open command on Linux, 
 0:19 different one on OS X and a different one on Windows, 
 0:21 now there are variety ways to determine what basic platform you are working on 
@@ -12,8 +12,8 @@
 0:38 So we need another way which we can get with this platform module 
 0:41 so we can say if platform.system 
 0:45 now platform is another module we have to import so again
-0:49 we'll let PyCharm do that, 
-0:51 you have to kind of experiment with it to see what it returns
+0:49 we'll let PyCharm do that. 
+0:51 You have to kind of experiment with it to see what it returns
 0:54 but on OS X it returns Darwin, on Linux it returns Linux 
 0:58 and on Windows it returns Windows,
 1:00 so that should be pretty easy, 
@@ -34,5 +34,4 @@
 2:03 that's not really a big problem 
 2:05 we'd have to check what the file extension is when we save it. 
 2:08 So pretty cool, we were able to use platform.sys
-2:10 to determine what subprocess to call. 
-
+2:10 to determine what sub-process to call.

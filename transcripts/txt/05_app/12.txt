@@ -11,12 +11,12 @@
 0:35 saying html is this, the second parameter is the name of the parser to use.
 0:39 But down here we are going to say something different,
 0:42 we are going to name the parameters, 
-0:44 we'll say Id=and then id is going to be location, right, 
+0:44 we'll say Id = and then id is going to be location, right, 
 0:46 so this explicitly naming the variables here lets us have more flexibility 
 0:50 in the way and the order in which we call the function. 
 0:53 So this is going to go get that div that contains H1 
 0:56 and then within there we would like to get the actual H1 itself.
-1:01  And then get the text, so we can use what is called a fluent interface
+1:01 And then get the text, so we can use what is called a fluent interface
 1:04 this find method takes one of these soup objects 
 1:06 but it also returns another one
 1:09 there is sort of a sub element that we can just search within the location 
@@ -32,7 +32,7 @@
 1:38 but look at all this other stuff, 
 1:40 this is actually just the node H1 that contain that header, 
 1:43 if we want just the text we can actually say .get_text
-1:47  if I run this again, 92701 is what I had typed, 
+1:47 if I run this again, 92701 is what I had typed, 
 1:51 and now there we go, we have Santa Ana California 
 1:54 and all of this basically from here down this is all what came back 
 1:59 so we are going to have to do some cleanup on this 
@@ -41,14 +41,13 @@
 2:08 so we can say that the condition is going to be soup.find
 2:13 remember this is contained within a div 
 2:15 which has the id current condition, 
-2:18 so we can similarly go down here and say say id= like that 
+2:18 so we can similarly go down here and say say id = like that 
 2:21 then we can say find and this time we are not going to name the element 
 2:24 but in fact we have a class wx value, 
-2:27 now in Python class is a keyword so they use class_here like this 
-2:31 and we'll say .get text. 
-2:36 And let's print out the condition
-2:38 
-2:43 it's overcast, ok,  let's just stop for a minute and see how awesome this is, 
+2:27 now in Python class is a keyword so they use class_ here like this 
+2:31 and we'll say .get_text. 
+2:36 And let's print out the condition.
+2:43 It's overcast, ok, let's just stop for a minute and see how awesome this is, 
 2:48 so we went and basically two lines of code came up here 
 2:53 and we downloaded this weather forecast from the internet using Requests 
 2:56 and just a handful lines more created a Beautiful Soup 
@@ -70,5 +69,4 @@
 3:55 right now it is overcast, 8.6 C, in Portland, how awesome is that? 
 4:00 So the last thing to do here is some cleanup 
 4:03 on all these strings and then return them from  this method. 
-4:06 So we'll get to that next. 
-
+4:06 So we'll get to that next.

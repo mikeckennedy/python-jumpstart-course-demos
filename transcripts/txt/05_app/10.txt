@@ -12,7 +12,7 @@
 0:31 So we are going to write the function parse HTML 
 0:35 and we are not going to worry about the return value right away, 
 0:38 so let's just say parse, no let's make it be the more purpose driven, 
-0:42 get weather from html and we'll give it the html, 
+0:42 get_weather_from_html() and we'll give it the html, 
 0:47 so let's go write this function, down here, 
 0:50 so our goal is to take this HTML which is dynamically generated 
 0:54 by the server including the weather report 
@@ -25,7 +25,7 @@
 1:18 and ides and stuff form this HTML 
 1:20 and then we'll use that in code to pull out the little bits that we need. 
 1:24 Start by creating something called a Beautiful Soup class, 
-1:27 so we say BS 4. beautiful soup, 
+1:27 so we say bs4. beautiful soup, 
 1:30 now notice how I can just type BS and it actually finds 
 1:34 all of the things that have sort of this camel casing capital B capital S
 1:39 that's super handy and we are going to give it this HTML. 
@@ -51,5 +51,4 @@
 2:42 you'll see there is all sorts of find methods here 
 2:45 and we can use this finds to navigate the tree and pull out the elements
 2:49 that we need but what do we put in there, 
-2:52 that's where we go and we inspect the HTML. 
-
+2:52 that's where we go and we inspect the HTML.

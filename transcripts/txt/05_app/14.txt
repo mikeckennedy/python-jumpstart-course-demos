@@ -1,5 +1,5 @@
  0:00 Let's finish up our program. 
-0:02 The last thing we need to do from this get weather from html function
+0:02 The last thing we need to do from this get_weather_from_html() function
 0:06 is actually return the weather report 
 0:08 we are technically printing it here 
 0:11 so we are communicating it back to the user 
@@ -98,5 +98,4 @@
 5:13 that is not a super sentence, right, 
 5:16 but how am I suppose to know from this data structure, right, 
 5:19 working with tuples they are great to bundle up sets of related data 
-5:23 but they are kind of hard to work with so we can do better. 
-
+5:23 but they are kind of hard to work with so we can do better.

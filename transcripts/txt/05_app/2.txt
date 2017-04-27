@@ -21,28 +21,29 @@
 1:01 now recall, if I run this there is no run configuration 
 1:05 so I'll make one by right clicking and say run program- nothing happens, 
 1:09 our little print statement doesn't show up 
-1:11 and that's because we have to call main
+1:11 and that's because we have to call main()
 1:13 and we saw that this really is not the right way to do it
 1:16 if somebody wants to reuse this module, this script, 
 1:20 if they import it this is always going to run our app, 
-1:23 so we saw that there was that convention we say, if__name__=__main__ 
-1:31 then we would run our main method, 
-1:34 this is so common, that PyCharm has what is called live templates, 
-1:39 so I can come over here and you can see that there is main, 
+1:23 so we saw that there was that convention we say, if__name__='__main__' 
+1:31 then we would run our main() method, 
+1:34 this is so common, that PyCharm has what is called live templates. 
+1:39 So I can come over here and you can see that there is main(), 
 1:42 this is the method I wrote 
 1:43 but then there is this main which has actually got some code here 
-1:47 and if I just hit tab it actually auto expands out of here
-1:51 so this is one of the live templates, 
+1:47 and if I just hit tab it actually auto expands out of here.
+1:51 So this is one of the live templates, 
 1:53 I'll pull those up really quick, 
 1:55 you can see there is actually a ton of live templates here,
 1:58 that you can use, here is the one that we are running 
 2:00 but for all sorts of various not as Python 
 2:02 but SQL and Django and so on, 
-2:04 so let's go ahead and use our main bit here, 
-2:07 and in that case we are going to call main, 
-2:09 so now out job is to actually start writing these methods and drop this bit, 
-2:15 so we are going to print the header so we'll just say 
-2:18 call a method print of the header, 
+2:04 so let's go ahead and use our main() bit here, 
+2:07 and in that case we are going to call main(). 
+2:09 So now our job... let's verify runs, still is,
+2:12 now our job is to actually start writing these methods and drop this bit. 
+2:15 So we are going to print the header so we'll just say 
+2:18 call a method print_the_header(), or print header however you want to call it,
 2:22 and let's put this down below, like so 
 2:28 and remember, all of our headers looked something like this, 
 2:35 and here it says weather app centered, usually, and the final new line. 
@@ -69,6 +70,6 @@
 3:43 where on the web we are going to get this 
 3:45 but let's just do a print out of the code really quick 
 3:48 just to make sure everything is hanging together. 
-3:50 So what is your zip code, it's 01010 perfect, 
+3:50 So what is your zip code, it's 01010 five digits perfect, 
 3:54 everything is working fine, except for we now need to go get some HTML off the web. 
 

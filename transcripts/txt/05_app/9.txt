@@ -1,4 +1,4 @@
-	 0:00 Let's talk about slicing. 
+ 0:00 Let's talk about slicing. 
 0:02 You can slice all sorts of things, you can slice strings,
 0:05 you can slice lists, you can even slice results that come back from databases
 0:10 you can have that slicing due some kind of paging on the database side on the server,
@@ -26,8 +26,8 @@
 1:27 and that gives us the first 4 items, 
 1:29 but there is the shortcut here where we can omit 
 1:32 the beginning if we are starting at 0,
-1:34 or the end, if we are going all the way to the end, 
-1:36 so these two statements are equivalent 
+1:34 or the end, if we are going all the way to the end.
+1:36 So these two statements are equivalent 
 1:39 we can also get the middle ones so if we want the 4th or the 3 index 0 based item 
 1:45 and then 3 more, we can say 3:6 and that will give us 7 through 13,
 1:51 and we can also go to the end just like our sliced one 
@@ -37,8 +37,8 @@
 2:03 you rarely have a fixed link you just hard code in there, 
 2:07 so this would be something like the length of numbers 
 2:10 minus 4: the length of numbers this is not cool, 
-2:13 but it does give us the result we are looking for, 
-2:15 what is more cool is to just say I would like to go from the 5th item onward, 
+2:13 but it does give us the result we are looking for. 
+2:15 What is more cool is to just say I would like to go from the 5th item onward, 
 2:20 that still requires you to know the length of numbers
 2:23 if you want just the last 4, so we can use this idea 
 2:26 of a negative index kind of like I talked about 
@@ -46,7 +46,7 @@
 2:31 and we can say I don't know how long it is 
 2:33 but I want you to go to the end and then go back for 
 2:36 and then go all the way to the end, 
-2:38 so this - 4: nothing will actually give us the last 4 items without 
+2:38 so this -4: nothing will actually give us the last 4 items without 
 2:43 us caring what the length is. 
 2:45 It's worth noting that when you are doing these slices 
 2:47 this type of stuff here you don't get errors 
@@ -57,5 +57,4 @@
 3:01 if I say give me the 1000th item and there is only 10- boom, that's a crash.
 3:06 So these aren't quite treated the same way in that regard, 
 3:09 but otherwise you can think of using these ranges as indexes 
-3:13 into the list and what you get back are little smaller lists. 
-
+3:13 into the list and what you get back are little smaller lists.

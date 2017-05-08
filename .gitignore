@@ -62,3 +62,6 @@ target/
 .ipynb_checkpoints
 .DS_Store
 .idea
+
+#VSCode
+.vscode/

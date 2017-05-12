@@ -26,3 +26,5 @@ while guess_incorrect:
 
 print('Well done {}, the hidden number was {}.'.format(name, hidden_int))
 print()
+
+# A comment

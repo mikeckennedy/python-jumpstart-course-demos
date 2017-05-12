@@ -4,7 +4,7 @@
 0:07 related sets of data but that data doesn't have to be all the same type, 
 0:11 here we have three numbers and the string
 0:14 and this is going to represent some kind of measurement
-0:17 now here we are going to ??? the temperature 
+0:17 now here we are going to put the temperature 
 0:19 and we've used the convention and that's really all it is
 0:22 it's a convention that the temperature is the first value 
 0:26 and the measurement quality is going to be the fourth item
@@ -51,5 +51,4 @@
 2:31 and you care about getting the values back out, and when wouldn't you, 
 2:35 very well may make sense to create a named tuple 
 2:38 to help you and all the other people that work with your code later on 
-2:42 be more successful with it. 
-
+2:42 be more successful with it.

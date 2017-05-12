@@ -10,15 +10,15 @@
 0:26 when you are just going to use the file stream just for a moment 
 0:29 and then you are going to close it right away
 0:32 you want to use what is called a context manager 
-0:34 so we'll say with and open is how we get all the file stream, 
+0:34 so we'll say with and open() is how we get all the file stream, 
 0:37 and we want to give it a name so let's come up here 
-0:39 and say file name = and again, we are going to use the OS model 
-0:42 so we'll say OS and import that at the top, 
-0:46 we'll say path.join and our folder is in absolute path so that should work 
+0:39 and say file name = and again, we are going to use the os model 
+0:42 so we'll say os and import that at the top, 
+0:46 we'll say path.join() and our folder is in absolute path so that should work 
 0:51 and then we have our name and then this is like the name of the cat 
-0:55 like lol cat 1 lol cat 7, these are basically jpegs 
-0:58 so let's just add on the file extension.jpg 
-1:02 so now we can say open file name and say as fout for output file stream, 
+0:55 like lol cat 1 lol cat 7, these are basically jpg's 
+0:58 so let's just add on the file extension.jpg. 
+1:02 So now we can say open file name and say as fout for output file stream, 
 1:07 and then we are going to somehow work with this,
 1:09 if I were to just write this code and try to write this data to it, 
 1:14 this data is binary, this by default is a text file
@@ -32,8 +32,8 @@
 1:37 and juggle the bytes and that would be fine 
 1:40 but it turn out there is a module called shell util that will help us out here. 
 1:45 So we'll say shutil, like so and we want to import that at the top of course, 
-1:50 and it has a method called copy file object
-1:54 so we can say I would like to copy this data stream to that data stream, 
+1:50 and it has a method called copy file object.
+1:54 So we can say I would like to copy this data stream to that data stream, 
 1:59 done, one line, beautiful. 
 2:01 Now, PyCharm says you should really move your method down one line, 
 2:04 according to pep 8 so there we go. 
@@ -43,13 +43,12 @@
 2:18 and then I'll show you how to fix it, it's really easy but it's also easy to overlook.
 2:22 Let's make sure we get some output while we are running our download 
 2:26 so we'll do a little print statement here, 
-2:28 we'll say contacting server to download lol cats, 
+2:28 we'll say contacting server to download cats, 
 2:33 and we'll say something like print downloading cat 
 2:40 and then let's actually involve the name here, 
 2:44 I'm going to say plus name, 
 2:46 and then at the very end I guess we could print done, 
 2:49 something like so so let's run it. 
-2:50 
 2:56 Ok, how exciting, let's go look at our cats, 
 2:58 so now you can see we have all of our cats and if I open them up, 
 3:02 that's not a super cool cat, 
@@ -63,7 +62,7 @@
 3:22 so in order to work with this raw stream here 
 3:24 in the manner that we were doing it, 
 3:27 we need to go tell request to operate in what is called streaming mode, 
-3:30 so we can say stream= true, and now if we just rerun it 
+3:30 so we can say stream = true, and now if we just rerun it 
 3:33 you should see some nice cats. 
 3:37 Ok, it's all done, let's go look at the cats. 
 3:41 Nice, trash cat is not amused, but I am, because this is awesome, 
@@ -77,5 +76,4 @@
 4:10 But as a user, how would I know my cats have been downloaded 
 4:13 other than seeing done, ok, great, done, 
 4:15 but I actually want to see the cats 
-4:17 so the next thing we are going to do is show the cats to the user. 
-
+4:17 so the next thing we are going to do is show the cats to the user.

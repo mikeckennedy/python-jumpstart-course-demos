@@ -14,15 +14,15 @@
 0:41 so PyPi if you go back aways, people have also referred to this as the chi shop, 
 0:46 building on the whole Monty Python history of Python itself. 
 0:50 Now, look at how many packages are in here, 
-0:52 there are 75 633 packages or libraries that you can just go out and grab, 
+0:52 there are 75,633 packages or libraries that you can just go out and grab, 
 1:00 and bring into your application. 
 1:02 Let's go to the website PyPi.python.org/pypi 
 1:06 because who wouldn't want a little reputation in their url, anyway right. 
 1:09 Over here, we have the Python package index 
 1:12 and you can see when I took that screenshot just yesterday, 
-1:16 there was 75 630- ish today, there are 75 690,
+1:16 there was 75,630 ish today, there are 75,690,
 1:22 so that is around 60 new packages added just in the last day. 
-1:26 That's not updating packages , that of course happens all the time, 
+1:26 That's not updating packages, that of course happens all the time, 
 1:29 but new packages that were not there before. 
 1:32 That is really awesome. 
 1:33 Let me show you one other thing, 
@@ -32,13 +32,13 @@
 1:43 as a programming language with batteries included, 
 1:45 meaning it has a really rich standard library with lots of functionality built in, 
 1:49 you wrap on the Python package index 
-1:52 and you get 75 000 more amazing things 
+1:52 and you get 75,000 more amazing things 
 1:55 and so the xkcd comic took that and did a really interesting little twist 
 2:00 and so let's go over here and actually not go to the web where xkcd is 
 2:04 but let's go to Python and actually launch Python 3. 
 2:07 Remember the way you use any of these packages from the package index 
 2:11 or the standard libraries, you say import 
-2:13 so you would say import OS to work with pass and so on 
+2:13 so you would say import OS to work with path and so on 
 2:16 but the cartoon goes something like this,
 2:19 import antigravity, because in Python you can import anything it basically exists,
 2:25 so what is going to happen if I hit enter, 
@@ -56,5 +56,4 @@
 2:58 but I think this is the Python". 
 3:01 So this little cartoon really captures the fact that there is so many things 
 3:05 you can just install and import and do amazing with. 
-3:09 That is one of the reasons Python is so fun to work with. 
-
+3:09 That is one of the reasons Python is so fun to work with.

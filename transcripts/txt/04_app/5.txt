@@ -10,16 +10,16 @@
 0:30 is to create a separate module or a separate file. 
 0:32 So let's call this journal, here we are initializing, 
 0:37 we are creating this journal and this is ok, it works but remember, 
-0:42 we'd like to initialize this from a file where we have saved an existing journal load up,
+0:42 we'd like to initialize this from a file where we have saved an existing journal load it up,
 0:46 create a new one if the file doesn't exist, all that kind of stuff. 
-0:49 So this is going to get way more complex instead of this one line here
-0:53 so let's move that over into our journal code 
-0:55 and we'll call it something like load, 
-0:58 so over here we are going to define a load method, 
+0:49 So this is going to get way more complex instead of this one line here.
+0:53 So let's move that over into our journal code 
+0:55 and we'll call it something like load. 
+0:58 So over here we are going to define a load method, 
 1:01 and let's suppose it's going to take the name of the journal. 
 1:04 And, it's counter part, we are going to write later, 
-1:07 it's going to be saved and again this is going to take a name, 
-1:11 now for the load, let's just temporarily write the code 
+1:07 it's going to be saved and again this is going to take a name. 
+1:11 Now for the load, let's just temporarily write the code 
 1:15 to basically do what we were doing before, just create an empty journal. 
 1:20 And we are storing the journal data as a list 
 1:22 so let's do this and just to remind ourselves, let's add a little to do. 
@@ -29,10 +29,10 @@
 1:34 we are also going to need the journal data, I want to pass it in. 
 1:38 So, how do we access these methods 
 1:41 which we are going to fill out with more interesting bits in a moment, 
-1:44 how do we access those over here, 
-1:47 first of all, let's just try to write it,
+1:44 how do we access those over here? 
+1:47 First of all, let's just try to write it,
 1:50 we could try to write load and there is obviously no load here, 
-1:53 we could write journal.load- there is no  journal either, 
+1:53 we could write journal.load there is no journal either, 
 1:57 so obviously like before, when we were working with 
 2:00 say the random class and various other pieces, 
 2:03 we need to import it, so the way you do this is the same 
@@ -43,13 +43,13 @@
 2:18 you can see PyCharm is saying yep, 
 2:20 that seems like a good thing to do and down here
 2:22 we can say something like journal. and there is our load and our save. 
-2:28 So we can write it like this, 
-2:30 now notice, we said import journal, 
-2:35 and down here we say journal.load. 
-2:39 So this style is referred to as name spaces, 
+2:28 So we can write it like this. 
+2:30 Now notice, we said import journal, format for a moment, 
+2:35 we said import journal and down here we say journal.load. 
+2:39 So this style is referred to has name spaces, 
 2:41 there are other ways we could import this, 
-2:43 I could have said something like this instead, 
-2:45 I could have said from journal, import and I could just name off the things 
+2:43 I could've said something like this instead, 
+2:45 I could've said from journal, import and I could just name off the things 
 2:51 like load and save and then down here
 2:53  I can just call load without the journal, right.
 2:56 Now, it depends on the method you are working with, 
@@ -70,10 +70,10 @@
 3:43 so we are going to say import journal, 
 3:45 and we are going to come down here and say load 
 3:47 and you can see that PyCharm is saying 
-3:49 we want to give it a name so let me just create a variable for it, 
+3:49 we want to give it a name so let me just create a variable for 
 3:51 our named journal, we'll can it journal name, 
 3:55 and it can just be something like default. 
-3:57 Something along this line. 
+3:57 Something along this line, Ok. 
 3:59 And down the end, let's make sure we do a save 
 4:01 so we'll say journal.save and we'll give it a name, and the data. 
 4:08 So the save really does nothing, 
@@ -88,7 +88,7 @@
 4:37 is we are directly working with this data structure,
 4:40 I'd much rather move this over into the journal pieces. 
 4:45 However, not this part because this has to do with the UI, 
-4:48 so instead of writing this code I could write journal.add entry, 
+4:48 so instead of writing this code I could write journal.add_entry, 
 4:54 and just pass the text here instead of this, 
 4:56 I could of course go over to the journal file, 
 4:58 write add entry just to kind of as you see it here

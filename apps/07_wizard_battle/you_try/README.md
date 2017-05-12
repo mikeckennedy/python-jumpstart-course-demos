@@ -57,7 +57,7 @@ Key concepts introduced
         
         def ...
 
-More info: [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)
+More info: [A Guide to Python's Magic Methods](https://github.com/RafeKettler/magicmethods/blob/master/magicmethods.pdf)
 
 **Inheritance**
 

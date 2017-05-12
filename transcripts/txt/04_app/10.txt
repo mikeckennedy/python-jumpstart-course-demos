@@ -1,6 +1,6 @@
 0:00 These complex conditionals are one of our core concepts from this app, 
 0:04 so look at this code here. 
-0:06 We have a variable X, Y and Z. 
+0:06 We have a variable X, and Y, and Z. 
 0:11 And we would like to run something if X is somehow false,
 0:14 either in number or boolean or something like this, 
 0:17 and the combination of Z is not 2 or Y is false, not Y, right, 

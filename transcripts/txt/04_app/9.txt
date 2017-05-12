@@ -7,8 +7,8 @@
 0:16 hey let's just exit, save and exit, 
 0:18 so we can change our code really quickly here, 
 0:21 first of all, let me change this to be something 
-0:23 other than a non-existent empty pointer
-0:28 we want to come up here and we want to have 
+0:23 other than a non-existent empty pointer, Ok?
+0:28 We want to come up here and we want to have 
 0:30 a complex conditional that says 
 0:32 when the command is not the x and it's not empty
 0:36 so in many languages, you use symbols like the && 
@@ -35,4 +35,3 @@
 1:45 and all the boolean logic you can do in regular programming. 
 1:49 All right, so here let's list the entries, 
 1:50 and hit enter boom, goodbye.
-

@@ -1,25 +1,24 @@
-0:00 Finally let's briefly turn our attention to this line 51 here, main. 
+0:00 Finally let's briefly turn our attention to this line 51 here, main(). 
 0:05 So I told you calling main like this is not ideal, 
 0:08 but I've been pushing off talking about why that is 
 0:12 and it really has to do with when your code is 
-0:14 used as an external module to other code, right, 
-0:19 either code you write or if you are writing a package, 
+0:14 used as an external module to other code, right? 
+0:19 Either code you write or if you are writing a package, 
 0:22 people who consume your package and let's see what the problem is. 
-0:25 Let me just create a program 2, 
-0:27 
-0:33 now over here in this program 2 suppose we would like to do 
+0:25 Let me just create a program 2.
+0:33 Now over here in this program 2 suppose we would like to do 
 0:37 this print header thing up here at the top. 
 0:39 This print header method, it's unlikely you would import that whole thing 
 0:44 just to get this but go with the idea. 
 0:46 Imagine I want to use this print header method up here 
 0:48 so I would like to do something like let's just say import program great, 
-0:54 and I could say program.print header. 
+0:54 and I could say program.print_header(). 
 0:58 Now let's make this super obvious what is happening
 1:00 in terms of the program flow, so I'll do a print, 
 1:02 and say about to import program, 
 1:08 let's call it step 1 down here we'll do a step 2 program imported, 
 1:16 and then maybe a step 3 printing header 
-1:23 and we'll add a step 4 down at the very end here, done. 
+1:23 and we'll add a step 4 down at the very end here, done... done with program. 
 1:30 Now, if you think how we want this to work 
 1:32 it should print about to import program,
 1:36 it should perform that silently, then it should print program imported, 
@@ -66,7 +65,6 @@
 3:58 Here you can see that's the __file__, 
 3:58 and here you can see that is __name__, 
 4:01 let's make this super explicit. 
-4:03 
 4:10 So I'll put __file__, __name__, then I will run it and you will see 
 4:13 the files that program is that could use a space, but you get the idea. 
 4:18 Ok, now let's go over here, let me add those spaces, 
@@ -82,9 +80,9 @@
 4:55 Well, down here in main, we can do this, 
 4:59 we can say if, __name__ is this main then in that case, 
 5:04 that means we are trying to run this program, 
-5:06 right now so let's kick off the main.
+5:06 right now so let's kick off the main().
 5:09 On the other hand, if it's being imported, 
-5:11 if this is program rather than main, 
+5:11 if this is program rather than main(), 
 5:14 just don't execute our code, just let it define the functions and variables. 
 5:17 So if I run program, that's this file right now, 
 5:20 it should be main, so it should act like our original app. 
@@ -93,10 +91,9 @@
 5:29 whereas I am running this program, 
 5:32 it's not going to be called __main__, it's going to be called program, 
 5:36 so let's run that, now notice file is of course what it is, 
-5:41 name is program we did not call main 
+5:41 name is program we did not call main() 
 5:43 so it worked exactly like we wanted, 
 5:45 1 about to import program, boom- done importing, printing the header, 
 5:50 so if we did not have this little print bit here,
 5:54 it would act exactly like you would have initially 
 5:58 expected program 2 to run. 
-

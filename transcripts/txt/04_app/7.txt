@@ -1,12 +1,12 @@
 0:00 So it's time to add persistence across running sessions 
 0:03 by saving and loading our journal from files. 
-0:07 Let's start by first saving our journal to a file, 
-0:11 so I want to come down here and any time that you work with file I/O, 
+0:07 Let's start by first saving our journal to a file. 
+0:11 So I want to come down here and any time that you work with file I/O, 
 0:15 you always start with this built in called open. 
 0:18 So here we can pass the file name by default you see the mode is R
 0:22 that's read only text but we are going to change that to W for write, 
-0:26 and we are not really going to worry about the other options, 
-0:29 so we need a file name that goes here and we want to have 
+0:26 and we are not really going to worry about the other options. 
+0:29 So we need a file name that goes here and we want to have 
 0:33 the mode to be write, because we are going to create or replace a file, 
 0:36 we are not going to just read one, 
 0:38 and we'll catch this and I call it fout, from file output stream, 
@@ -14,31 +14,31 @@
 0:45 The first thing we really have to do to make this work
 0:47 is actually get this file name here, so I could say, 
 0:51 let's actually have a little folder, 
-0:52 that we are going to save our files into a directory, 
+0:52 that we are going to save our files into... a directory, 
 0:56 so let's call this journals, let's suppose we want to put them in there, 
 1:00 and I could say something like this, 
-1:02 I could say file name equals, journals/
+1:02 I could say filename = './journals/'
 1:06 and then there is this name 
 1:08 remember we are passing in this journal name here, 
 1:10 so let's say name, and let's suppose on the end 
-1:12 when I have a jrl file extension to indicate our custom journal format or whatever,
+1:12 when I have a 'jrl' file extension to indicate our custom journal format or whatever,
 1:18 it's hard it's going to be worthy of that but here we go. 
 1:20 Now technically, this would work on OS X and Linux,
 1:23 it may not work on Windows, right, remember, 
 1:27 Windows uses backslashes to separate directories, not for slashes, 
 1:31 but more important than that, if I am combining multiple directories, 
 1:36 say if I am giving a like a base directory equals something like this 
-1:41 until this slash, and I am giving a relative directory = data/temp.
+1:41 '~/', and I am giving a relative directory = data/temp.
 1:50 If I am given these two and I want to build up the full path, 
-1:53 I would say full file = base_dir + and I need to use a little separator here
+1:53 I would say full_file = base_dir + and I need to use a little separator here
 1:59 because you can see on this part there is no separator up there
 2:03 and then we'll say + relative directory, like so 
 2:06 and if this is passed me well do I know whether there is this little slash on the end
 2:12 do I need to put it here, do I check, all those little nuance details
 2:16 in Python we don't actually need to deal with any of that
 2:19 and we get OS independent path operations,
-2:23 all I am using is this module called OS 
-2:26 so I want to come up here, I want to import OS, and down here,
+2:23 all I am using is this module called OS. 
+2:26 So I want to come up here, I want to import OS, and down here,
 2:30 I can say instead of doing this thing, 
 2:32 I would like this file to be os.path. and we can just say join, 
 2:37 and put a whole bunch of little paths to segments together, 
@@ -56,8 +56,8 @@
 3:14 what the working folder was, at the time, right, 
 3:17 so I could say path.absolutepath, 
 3:22 now if I run it, exit out of here, 
-3:24 you can see user screen caster source python jumpstart... number 4, 
-3:28 right this is the full path and this works perfectly well in all of the major platforms. 
+3:24 you can see user screen caster source python jumpstart... darara number 4, 
+3:28 right this is the full path and this works perfectly well in all of the major platforms. Ok?. 
 3:35 So this is going to let us work with that folder right there, 
 3:39 and let's go and say just this, saving to here, 
 3:44 and put a little indicator that that's not 
@@ -111,20 +111,19 @@
 6:18 And we won't need this anymore, 
 6:20 because as soon as we leave this block right here, 
 6:24 it's defined by the indented section it's going to automatically call close.
-6:29 Ok, so let me clean this up a little bit, 
-6:31 
-6:38 here is our final save, we are going to use os.path.absolutepath
+6:29 Ok, so let me clean this up a little bit.
+6:38 Here is our final save, we are going to use os.path.absolutepath
 6:42 to get a full path from our relative path we built up with join, 
 6:46 and in OS we do have these for slashes in here, 
 6:49 so maybe it would make more sense to write it like so, there we go, 
 6:53 that way it doesn't depend on for slash being a particular separator, 
-6:57 so here now we have a proper OS independent style
-7:00 we use our context manager, our open method to get the file stream, 
+6:57 so here now we have a proper OS independent style.
+7:00 We use our context manager, our open method to get the file stream, 
 7:05 and then we just call write, and we write out the text, 
 7:08 if we want the binary version, we would say WB for write binary, 
 7:11 and that's that, we are going to do something very similar for loading it. 
 7:17 In fact, so much so that we are going to use exactly the same line of code, 
-7:22 I kind of feel like that should be like  a method or something, 
+7:22 I kind of feel like that should be like a method or something, 
 7:25 so let's go over here and I could write a method
 7:28 in this file or I could go to PyCharm and hit control T 
 7:32 and say I'd like to create a method let's call it get full path name something like that,
@@ -141,7 +140,7 @@
 8:09 we are going to use our with, but we are going to not use the w,
 8:12 we are not trying to write it we are just going to read it, 
 8:14 and I'm going to call it fin for file input, 
-8:17 and then we can just say for entry and fin.readlines, 
+8:17 and then we can just say for entry and fin.readlines(), 
 8:23 and that will just read in the lines and let me just print,
 8:27 would load and put a little print here entry.
 8:30 Now this is not going to work out quite as good as we would like, but let me run it, 
@@ -150,14 +149,14 @@
 8:43 the new line character is still stuck on the end, 
 8:46 right that back slash end that we out here, 
 8:49 or just naturally the file, is on here, it's not removed, 
-8:53 so we can come over here and say strip, 
-8:55 maybe we want to be careful and just say rstrip off the end, 
+8:53 so we can come over here and say strip(), 
+8:55 maybe we want to be careful and just say rstrip() off the end, 
 8:59 now if I run it, I would say would load thing 1, thing 2, 
 9:03 those are exactly the entries we were hoping for. 
 9:06 Ok, so instead of doing this, 
-9:08 we come down here and say data.apend entry. 
+9:08 over here we say data.apend(entry). 
 9:11 Now if I could just load it up and I say list, 
-9:14 of yeah, I forgot the r strip, so let's say r strip 
+9:14 of yeah, I forgot the rstrip(), so let's say rstrip() 
 9:19 to remove the white space off the right hand side,
 9:21 now have a look, perfect, still misspelled, 
 9:24 thing 2, thing 1 exactly the right order because remember, we are reversing it. 
@@ -170,7 +169,7 @@
 9:52 we created which is of course reversed of what we are showing. 
 9:55 Beautiful, let's go back and just review what we did for load,
 9:57 it's even easier than save, wasn't it, ok, 
-9:59 over here in journal move our to do, 
+9:59 over here in journal we can remove our TODO, 
 10:03 so we create an empty journal bit of data and then we get the file name
 10:07 using our full path function right, ospath. absolute path and join 
 10:11 and then, we ask if it does exists let's load it, 

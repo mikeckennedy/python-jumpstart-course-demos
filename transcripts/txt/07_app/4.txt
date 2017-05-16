@@ -2,11 +2,11 @@
 0:04 and wizard as a thing in memory 
 0:07 but they don't really do anything or have any behaviors or data, 
 0:10 so let's go over here and look at this, 
-0:12 let's look at the creature first, 
-0:14 so what might the creature have, well, 
+0:12 let's look at the creature first. 
+0:14 So what might the creature have, well, 
 0:16 maybe the creature is going to have to have a level, 
 0:19 and let's have it have a name, 
-0:21 so we can say something like toad of level 7, something like that. 
+0:21 so we can say something like toad of level 7, something like this. 
 0:26 So there is actually several ways to add those features as data to this class. 
 0:31 And the way that I am going to show you will generate 
 0:34 what are called instance attributes or instance variables,
@@ -26,12 +26,12 @@
 1:19 so here you can see length, 
 1:23 if we had some kind of collection and we wanted to talk 
 1:26 about how many items were in it, 
-1:28 we could implement dunder len and when somebody says len (our object) 
+1:28 we could implement __len__() and when somebody says len (our object) 
 1:33 it would implicitly call this method. 
 1:35 If we wanted to change how our creature appeared when you just said print creature, 
-1:40 it was no special formatting we could implement dunder str 
+1:40 it was no special formatting we could implement __str__() 
 1:43 and then we would get some kind of special string representation. 
-1:47 But the one we are looking for is dunder init. 
+1:47 But the one we are looking for is __init__(). 
 1:50 So here there is something a little bit unusual in this method, 
 1:53 notice when I hit enter there, PyCharm put this self and this self has a color, 
 1:58 while other variables in here, parameters, 
@@ -119,7 +119,7 @@
 6:13 We can open this up and see there is our bat,
 6:16 there is our tiger, there is our toad and so on. 
 6:19 So we spoke a little bit about magic methods,
-6:22  and you can see that this is not the most amazing experience 
+6:22 and you can see that this is not the most amazing experience 
 6:25 for looking at what is in this list of creatures 
 6:28 and that's not the only place it showed up,
 6:30 if I were to come here and just say print the creatures, and I run this, 
@@ -127,20 +127,19 @@
 6:37 there is some kind of actor.creature at these various addresses. 
 6:42 And we can use the magic methods to change how this works. 
 6:45 so my creature, I can down here and I can say 
-6:48 define dunder repr, for representation, 
+6:48 define __repr__(), for representation, 
 6:51 and then I could just say return some kind of string 
 6:54 so let's say creature of the name of level- 
 6:58 something there we'll do a little format like so 
 7:01 and so when you say self when you refer to the variables
 7:04 of the particular instance of the type of class like so 
 7:08 the particular creature here, I'd say self.name, and self.level. 
-7:13 Maybe format instead of forma, have a little better chance there. 
+7:13 Of course maybe format instead of forma, have a little better chance there. 
 7:17 So we are going to return a string that could be used in various places, 
 7:20 so now if I run this you can see we have a creature toad of level 1, 
 7:24 maybe like so or something.
-7:29 Creature tiger of level 12 and so on, 
+7:29 Creature, toed of level 1, creature tiger of level 12 and so on, 
 7:35 so we are only getting started with our classes and modelling the actors in our game, 
 7:40 but you can see we are already after a good start we have a list of creature objects, 
 7:46 they have their particular data associated with them, 
-7:49 and we have our hero which is a wizard named Gandolf of level 75. 
-
+7:49 and we have our hero which is a wizard named Gandolf of level 75.

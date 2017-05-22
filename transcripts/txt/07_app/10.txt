@@ -2,7 +2,7 @@
 0:02 we kind of would like to use the wizard specialization, 
 0:06 the wizard class as any other fighter in our game. 
 0:10 And the commonality that we need for any kind of fighter
-0:13 is of course that it is a creature.
+0:13 is of course that it is a creature, right?.
 0:18 And we just saw that we can use inheritance up here like so 
 0:22 and say this wizard is a creature. 
 0:25 Now, this is little annoying, 
@@ -21,7 +21,7 @@
 1:03 one way we could just say we are going to have this init method here 
 1:08 and we could say super and this will give us access to 
 1:11 the direct methods on creature, 
-1:14 we could say dunder init and we can say name and level, 
+1:14 we could say __init__() and we can say name and level, 
 1:18 and now the warning will go away, right, 
 1:20 and we are actually passing this off, 
 1:22 so when you call this method, by creating a wizard 
@@ -69,15 +69,15 @@
 3:54 We could use that for something, but we don't really in this game. 
 3:57 I guess the thing we can do to make this small animals special is 
 4:00 maybe it's a little extra weak, so down here we can change this get defensive roll, 
-4:06 in the creature class, it has a get defensive roll and it just does this, 
+4:06 in the creature class, it has a get_defensive_roll() and it just does this, 
 4:10 let me copy the whole thing, and we can actually change how this works ok,
 4:16 so we can come over here and say the small animal has 
 4:19 all the behaviors and everything from the creature 
-4:21 except it's going to have its own version of get defensive roll. 
+4:21 except it's going to have its own version of get _defensive_roll(). 
 4:24 Now, some programming languages when you are doing inheritance 
 4:28 you have to have special words like override or virtual or these sorts of things, 
 4:31 Python doesn't have that, we just have one method 
-4:35 it's called get defensive roll, 
+4:35 it's called get_defensive_roll(), 
 4:36 if we just say it in the other classes something replaces it. 
 4:39 If we leave it this way, things should just still work again
 4:42 other than the wizard is not what we are looking for, but the bat is, perfect.
@@ -91,9 +91,9 @@
 5:14 so I got 6 so then we cut that down to 3.0. 
 5:17 So now we specialize our small creature to be 
 5:20 a little easier to defeat than the others, well quite a bit really. 
-5:23 However, this part of code, is literally this base get defensive roll. 
+5:23 However, this part of code, is literally this base get_defensive_roll(). 
 5:32 Ok, so we can actually change this, we can say you know what, 
-5:36 it could be the super, go to the creature class and we can call it it get defensive roll, 
+5:36 it could be the super, go to the creature class and we can call it it ge_ defensive_roll(), 
 5:40 and that way as this evolves over time 
 5:43 maybe we decide to switch to a 15 sided dice or something like that 
 5:48 we don't have to maintain the small animal, 
@@ -115,13 +115,13 @@
 6:46 basically the setup in the data that the wizard and the small animal use
 6:52 is the same as the creature, but the dragon, I am going to change this,
 6:54 I want the dragon to have a scaliness and an indicator whether it breaths fire or not. 
-7:00 So what we are going to do is we are going to define a dunder init
+7:00 So what we are going to do is we are going to define a __init__()
 7:03 and it's going to have to take all the data 
 7:06 or at least somehow supply the data that the creature is going to need, 
-7:10 so name and level, and then I am going to have a scaliness and a breaths fire, 
+7:10 so name and level, and then I am going to have a scaliness and a breaths_fire, 
 7:16 this will be a boolean to say it does or does not breath fire. 
 7:19 and then the first thing that we should do is 
-7:21 we should set up the creature feature so we'll say super.dunder init, 
+7:21 we should set up the creature feature so we'll say super.__init__(), 
 7:27 name and level, and then we need to assign to the dragon 
 7:32 whether or not his scaliness and whether or not it breaths fire. 
 7:35 So we can just say add this parameter here 
@@ -139,27 +139,27 @@
 8:15 maybe we'll have a factor of 5 or something, 
 8:18 I mean that's a pretty serious defensive measure that it literally can breath fire. 
 8:22 I could write this, let me say none and I'll say 
-8:26 if self.breaths fire, the fire modifier = 5 maybe this could just be 1 
+8:26 if self.breaths_fire, the fire_modifier = 5 maybe this could just be 1 
 8:36 but let me put it this way just an else statement, 
-8:38 so it's a little more clear, so else fire modifier = 1, 
+8:38 so it's a little more clear, so else fire_modifier = 1, 
 8:43 now this bit right here, we are using all these lines of code to do this,
 8:46 we could actually write this in a much nicer way, 
-8:49 we'll say fire modifier = and I can put this 
+8:49 we'll say fire_modifier = and I can put this 
 8:53 all in one line in this condensed if statement the Python supports, 
 8:56 let me just sketch out the placeholder 
 8:59 so value if true say if some test else value if false, right, 
 9:08 so if we use this the value if- let's do the test first, 
-9:11 so the test is going to be if breaths fire, self breaths fire, 
+9:11 so the test is going to be if breaths_fire, self breaths_fire, 
 9:18 so if it does breath fire, I would like the modifier to be 5, 
-9:21 but if it does not breath fire, I would like the modifier to be 1,
+9:21 but if it does not breath_fire, I would like the modifier to be 1,
 9:25 ok, so let me put this like so,
 9:27 so now this will actually let us in one nice little condensed line, 
 9:31 specify the fire modifier, the other thing is the scaliness factor, 
 9:36 let's say this i s a number between 1 and 100, 
 9:40 and it has like a 10% effect on here, so we'll have something like this, 
-9:44 scale, modifier = scaliness self.scaliness, divided by 10, right, 
+9:44 scale_modifier = scaliness self.scaliness, divided by 10, right, 
 9:55 so if it's a 100 it multiply it by 10, if it 1 it actually takes it down a little bit, 
-9:59 so then we are going to return base roll times fire modifier times scale modifier. 
+9:59 so then we are going to return base_roll times fire_modifier times scale_modifier. 
 10:07 Ok, now let's go back to our program here 
 10:10 and let me just put this back for a minute, 
 10:13 that's how it was before we started to talk about these dragons, 
@@ -168,11 +168,11 @@
 10:21 that's because I again forgot to import it, 
 10:24 it's kind of why I like the name spaces you don't have to keep doing this, 
 10:26 but it's all good. 
-10:29 So now we have our dragon, but notice PyCharm is already telling us not so good, 
+10:29 So now we have our dragon, but notice PyCharm is already telling us hummm? not so good, 
 10:32 but it won't run it will say you are missing
-10:34 this parameter of scaliness and breaths fire right there, 
+10:34 this parameter of scaliness and breaths_fire right there, 
 10:37 so let's say that this dragon has a scaliness of 50, no let's say 75, 
-10:45 that's a pretty serious scaliness and it does breath fire, 
+10:45 that's a pretty serious scaliness and it does breath_fire, 
 10:49 so this dragon is now a much harder thing to fight, all right,
 10:52 so let's look around, so we see- let's run away
 10:58 until we see something that is a dragon. 
@@ -194,8 +194,8 @@
 11:59 it takes all that into account during this battle 
 12:02 but the wizard doesn't have to know it's a dragon, it can still treat it like a creature. 
 12:07 And yet it behaves differently, finally the wizard can also behave 
-12:11 like just another creature in the game because it derives from creature, 
-12:15 we do this derivation by just defining the creature class 
+12:11 like just another creature in the game because it derives from creature. 
+12:15 We do this derivation by just defining the creature class 
 12:18 and then we say the wizard is a creature, here we have an additional method 
 12:23 that's not in the creature class called attack, 
 12:26 PyCharm we can collapse those, and then the small animal 
@@ -210,5 +210,4 @@
 12:55 like the scale modifier which apparently I misspelled. 
 13:00 So this just gives you a little taste of object oriented programming 
 13:03 but the types of applications that you can build are seriously powerful 
-13:06 and it's a lot of fun to think about solving problems this way. 
-
+13:06 and it's a lot of fun to think about solving problems this way.

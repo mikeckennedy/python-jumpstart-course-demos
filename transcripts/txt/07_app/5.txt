@@ -20,7 +20,7 @@
 1:08 I would like to randomly get one so we'll say 
 1:12 I would like to just randomly select a creature 
 1:14 so let's do a little print statement to just say what that creature is. 
-1:18 We'll say a { } name of the creature or something, 
+1:18 We'll say a { } so you know, and then the name of the creature or something, 
 1:22 has appeared from a dark and foggy forest, something like that.
 1:31 Now, I want to add the levels so we'll say of level 
 1:36 that's very important to know whether we should attack it, 
@@ -143,13 +143,13 @@
 8:13 Ok the wizard Gandolf attacks tiger and you roll 375, the tiger 24. 
 8:20 So the wizard has handily defeated the tiger. 
 8:22 Now, something more serious has happened, 
-8:25 a dragon of level 50 let's give that thing a shot, oh,
+8:25 a dragon of level 50 let's give that thing a shot, OH NO!!!,
 8:29 now we only got 75 the dragon did 100 and we have been defeated. 
 8:33 Now there is really no consequence for us to be defeated 
 8:37 and if we look around we haven't implemented that part yet, but if we did,
 8:41 you would see that all the creatures are still there 
-8:43 even though they have been defeated
-8:45 let's do a little work on the consequences of being defeated. 
+8:43 even though they have been defeated.
+8:45 Let's do a little work on the consequences of being defeated. 
 8:48 So over here we'll say if when the hero attack the creature they win, 
 8:52 what we should probably do is remove that creature from the game. 
 8:55 This creatures list holds all the living creatures, 
@@ -184,7 +184,7 @@
 10:43 So what we are going to do is just say something like 
 10:46 wizard so and so takes in the surroundings and sees 
 10:54 then I want to loop over each of the creatures 
-10:56 so I'll just say remember our forin loop, 
+10:56 so I'll just say remember our for in loop, 
 10:58 so we'll say for c in creatures we'll print out 
 11:02 maybe a little sort of place holder thing like this 
 11:04 and we'll say a name of level such and such
@@ -194,7 +194,7 @@
 11:17 now we can see if our remove is working 
 11:19 ok so the tiger again, every single time it's the tiger,
 11:22 all right tiger attack oh we definitely defeated him,
-11:27 o-o, a dragon of level 50, it's not so good,
+11:27 oh oh, a dragon of level 50, it's not so good,
 11:30 so we'll look around and apparently we are going to need to put something there
 11:33 a toad of level 1, a bat of level 3, a dragon and an evil wizard. 
 11:38 Well, the dragon is away, the toad is out, we can attack it and beat it of course,
@@ -216,7 +216,7 @@
 12:31 well the very last thing to implement is just run away 
 12:34 and that is super easy to do 
 12:37 let's just say print the wizard has become unsure of his power and flees.
-12:45 All right so let's look around, oops, focus focus- look around, 
+12:45 All right so let's look around, oops, focus focus focus- look around, 
 12:50 so the wizard is looking around he sees all this things, 
 12:53 oh my gosh this toad is frightening, run away, 
 12:55 all right so the wizard has become unsure of his power and flees, 
@@ -227,5 +227,4 @@
 13:12 while it works in this simple scenario 
 13:14 is not maybe the best way to model things 
 13:16 so we are going to do one more pass on this 
-13:19 and make sure we have everything just right. 
-
+13:19 and make sure we have everything just right.

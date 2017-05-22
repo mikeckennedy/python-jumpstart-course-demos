@@ -14,14 +14,14 @@
 0:46 you know, let's say it's toad, so toad walks around. 
 0:48 See this yellow keyword self, this is a convention, 
 0:52 it could be called anything, 
-0:53 in other languages it's called this and like CSharp or C++ 
-0:57 but here we are calling itself and its pass to all instance methods 
+0:53 in other languages it's called this and like C# or C++ 
+0:57 but here we are calling self and its pass to all instance methods 
 1:01 and that's how we access the field, 
 1:04 here we are saying self.name this is just a standard instance method, 
 1:08 the one above it is the initialzier, and you can tell 
 1:11 that is a magic method because it has double underscores on both sides, 
 1:15 so typically this is referred to as "dunder" 
-1:18 so here we would say dunder init, 
+1:18 so here we would say __init__(), 
 1:20 and this is actually not often directly called 
 1:24 but it is actually part of the initialization creation process of the creature, 
 1:28 so when we create a new creature 
@@ -37,5 +37,4 @@
 1:57 you can have static methods, you can have class methods, 
 2:00 you can have static variables or fields on the class 
 2:04 so we are just using sort of the most common stuff here in our game, 
-2:08 but you can go really deep with classes and actually do a ton. 
-
+2:08 but you can go really deep with classes and actually do a ton.

@@ -30,7 +30,7 @@
 1:49 so let's actually print this out in a slightly different way 
 1:51 where we have a little more control to go through, 
 1:53 so let's say for n in Fibonacci like so, 
-1:57 and we'll just print in and we'll do that end = just a little comma thing 
+1:57 and we'll just print(n) and we'll do that end = just a little comma thing 
 2:01 so we can have on the same line, let's run that, perfect, 
 2:04 it looks basically the same but here is the key thing, 
 2:07 let's put a break point here and actually step through, 
@@ -102,13 +102,13 @@
 6:06 let's suppose we want it all the Fibonacci numbers, 
 6:09 the infinite sequence of numbers. 
 6:12 We could remove this limit and we could just say I want to do this forever, 
-6:16 now obviously doing this forever is going to sort of be a problem, it won't crush,
+6:16 now obviously doing this forever is going to sort of be a problem, it won't crash,
 6:22 it will just keep going and getting slower and slower, and so on, 
 6:24 but it does let us down here as a consumer decide when we've had enough 
-6:29 so we could say if n > 100 then break, 
+6:29 so we could say if n > 1000 then break, 
 6:34 but we have access to the entire infinite series. 
 6:38 Now, if I did this with the list, this would just run for a long time, 
-6:41 run out of memory and then crush, but that's not what happens here, 
+6:41 run out of memory and then crash, but that's not what happens here, 
 6:45 we just get one compute the next, compute the next 
 6:47 and any step along that path is super cheap, 
 6:50 basically a couple of additions and a return value, so let's run this again. 

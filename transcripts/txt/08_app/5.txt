@@ -3,8 +3,8 @@
 0:06 where we can just play around with some ideas. 
 0:08 We'll do this for recursion but we also do this for our generator methods later. 
 0:12 Let's take a really simple case something like creating the factorial of a number. 
-0:16 Now remember, factorials are sort of iterative processes 
-0:21 the factorial written with like a number and an exclamation point right 
+0:16 Now remember, factorials are sort of iterative processes.
+0:21 The factorial written with like a number and an exclamation point right 
 0:25 so like let's say 5! = 120
 0:29 and the way that you get that is you take 5*4*3*2*1 
 0:37 and each step if I start here the thing I need to multiply is 
@@ -49,4 +49,3 @@
 2:59 you can see we now have separated those with digit grouping. 
 3:03 So this is a recursive algorithm, let's take a moment 
 3:06 and look at this as it's one of our core concepts.
-

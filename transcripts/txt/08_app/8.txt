@@ -17,7 +17,7 @@
 0:48 well the app actually does surprisingly well, 
 0:52 it really does go through and it finally has results and so on, 
 0:54 but if we leverage this concept of generator methods and related things 
-0:58 that will build on other applications, we can actually do amazingly better, ok, 
+0:58 that will build on other applications further down the line, we can actually do amazingly better, ok, 
 1:04 so just to make sure everything is working on Windows, 
 1:08 let me just search the same stuff here, 
 1:12 ok so we want to search c/users/mkennedy/desktop/books 
@@ -67,5 +67,4 @@
 4:08 this is not the most amazing outcome that we could have had. 
 4:11 It turns out it took almost 400 MB the way we implemented our algorithm, 
 4:17 and depending on the how we hold the data or the size of the data,
-4:20 it could be even worse. 
-
+4:20 it could be even worse.

@@ -1,13 +1,13 @@
 0:01 Ok, let's implement the actual search. 
 0:03 The first thing that we need to do is actually go to this folder and find all the files. 
 0:08 So again, our friend OS will help. 
-0:10 We can say OS.list.dir and give it a folder, 
+0:10 We can say OS.listdir() and give it a folder, 
 0:14 and here this is going to return all of the items in here so let's say items, 
 0:18 notice I am not calling them files because 
 0:21 sometimes they are folders, sometimes they are files. 
 0:24 So, we are going to do our loop, 
-0:27 we are going to say for item in items and we want to check, 
-0:29 well if this is a folder we don't want to do this so we'll say if os.path.isdir item 
+0:27 we are going to say for item in items: and we want to check, 
+0:29 well if this is a folder we don't want to do this so we'll say if os.path.isdir(item ):
 0:36 we are going to not process this item but we want to keep going to the loop 
 0:40 and the perfect keyword for that is continue, 
 0:43 so basically go back to the top of the loop, 
@@ -21,7 +21,7 @@
 1:06 is when we say listdir this only gives us the file name,
 1:09 not the full path name so either way whether it's a directory or a file, 
 1:13 we need to do something like this, 
-1:15 we'll go full item = os.path.join and remember, 
+1:15 we'll go full item = os.path.join() and remember, 
 1:21 we made sure that this is an absolute path 
 1:24 and then we want to join up the subitem, perfect, 
 1:26 so here we got the check full item 
@@ -48,7 +48,7 @@
 2:31 then we want to just go through each line in the file 
 2:33 and check it to see if the search text appears in it, 
 2:38 so it turns out that these file streams are iterable 
-2:41 so I could say for line in fin and in a really nice way 
+2:41 so I could say for line in fin: and in a really nice way 
 2:45 just sort of smoothly stream over them without loading the whole file of them 
 2:50 in the memory as like an array of strings or something like this, 
 2:52 this is also going to be really key way to use these generator methods later on 
@@ -66,7 +66,7 @@
 3:31 so they actually found find found the substring. 
 3:35 The other thing we got to do is make sure that this is lower case, 
 3:38 we could do that once above here instead of every time we had a file, 
-3:44 so let's do something like return text.lower. 
+3:44 so let's do something like return text.lower(). 
 3:47 Cool, so if this is the case let's for now just somehow collect up this line of text, 
 3:53 we are going to see that this is not the ideal way to do this
 3:55 and we'll fix it just in a moment, 
@@ -100,7 +100,6 @@
 5:36 and the phrase we want to search for is let's say "friends", 
 5:42 we'll that's pretty fantastic, 
 5:43 except for we forgot to print out the results, let's do that really quick. 
-5:47 
 5:53 Ok, so we'll capture the matches and for each one int here we'll just print this out. 
 5:56 Try again. 
 5:57 Search for friends and you can see we found some results, look at that. 
@@ -116,5 +115,4 @@
 6:26 but it does look like it's working, 
 6:28 now what line in what book did that appear in? 
 6:31 I have no idea, so our next job is to fix that so we actually return 
-6:35 more information about our search. 
-
+6:35 more information about our search.

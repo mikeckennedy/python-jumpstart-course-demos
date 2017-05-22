@@ -28,5 +28,4 @@
 1:34 and passing along until finally some sort of pipeline spits out 
 1:38 a smaller transformed set of items, 
 1:40 the composition of generator methods is amazing there. 
-1:43 And that's what we are going to build in our file searcher app, when we get back to it. 
-
+1:43 And that's what we are going to build in our file searcher app, when we get back to it.

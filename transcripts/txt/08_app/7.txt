@@ -50,5 +50,4 @@
 2:36 but if the number of files and the quantity of files gets to be gigabytes of text 
 2:41 you'll see there is a severe performance problem especially around memory 
 2:45 and we can do much better using some very cool features 
-2:49 called generator methods that's what we are going to do next. 
-
+2:49 called generator methods that's what we are going to do next.

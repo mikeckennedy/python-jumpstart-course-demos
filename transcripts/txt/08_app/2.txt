@@ -17,7 +17,7 @@
 0:48 so we'll just fly through it, 
 0:57 next we are going to get a folder from the user, 
 0:59 we'll say get_folder_form_user() and let's just do
-1:01 a quick little test like if they enter nothing we would rather not have our app crush 
+1:01 a quick little test like if they enter nothing we would rather not have our app crash 
 1:06 we'll just say hey search that, moreover, 
 1:10 if they enter folder that doesn't exist, 
 1:14 we'd also want to build the deal with this so just do a test, 

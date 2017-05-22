@@ -102,7 +102,7 @@
 6:06 let's suppose we want it all the Fibonacci numbers, 
 6:09 the infinite sequence of numbers. 
 6:12 We could remove this limit and we could just say I want to do this forever, 
-6:16 now obviously doing this forever is going to sort of be a problem, it won't crush,
+6:16 now obviously doing this forever is going to sort of be a problem, it won't crash,
 6:22 it will just keep going and getting slower and slower, and so on, 
 6:24 but it does let us down here as a consumer decide when we've had enough 
 6:29 so we could say if n > 1000 then break, 

@@ -1,4 +1,4 @@
- 0:00 Let's quickly talk about this cool concept of generator expressions. 
+0:00 Let's quickly talk about this cool concept of generator expressions. 
 0:03 Generator expressions are sort of the next evolution from list comprehensions, 
 0:09 and list comprehensions of course take the idea 
 0:12 of writing procedural code, declaring a list, 
@@ -26,5 +26,4 @@
 1:23 maybe it makes sense to use a list comprehension, 
 1:25 often though with these little expressions you create them, 
 1:28 you blast over them and you are done, in that case, 
-1:31 generator expressions probably are the way to go. 
-
+1:31 generator expressions probably are the way to go.

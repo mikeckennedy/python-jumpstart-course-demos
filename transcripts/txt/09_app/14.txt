@@ -1,4 +1,4 @@
- 0:00 One really powerful language construct in Python
+0:00 One really powerful language construct in Python
 0:03 is this thing called a list comprehension 
 0:05 that lets us take procedural code and condense it down to declarative code. 
 0:10 Here we have a bunch of customers, 
@@ -33,7 +33,7 @@
 1:41 we could say if that was going to be you then I would like to name, 
 1:44 so u.name goes into projection. 
 1:46 Then you write the source, and it always goes like for something in some set, 
-1:51 so here we have for u in get active customers. 
+1:51 so here we have for u in get_active_customers(). 
 1:54 And then finally the test or filter, so we say if and then we just put our test here 
 1:58 our test was if the last purchase was today, 
 2:01 so we say if you.last_purchase==today, done. 
@@ -44,4 +44,3 @@
 2:19 You also see as we move onto the next evolution of this concept, 
 2:24 the generator expressions, then you actually get even more benefit,
 2:28 there is actually performance benefits or consequences depending how you use it.
-

@@ -1,4 +1,4 @@
- 0:00 All right, I said there is a better way than using these 
+0:00 All right, I said there is a better way than using these 
 0:02 procedural loops to answer these questions. 
 0:05 Now, check this out, let's change this here, 
 0:08 let's write some code that maybe is a little surprising to you
@@ -14,13 +14,13 @@
 0:40 we are going to define a list, but we are going to put something different in there
 0:43  we are put in an expression, 
 0:44 first line is always going to be the projection or items to create,
-0:49  something like this, 
+0:49 something like this, 
 0:51 so what do we want, we want the purchase.price, here, 
 0:53 now it's a little bit backwards because you have to imagine, all right, 
 0:56 there is a variable p, that I am about to talk about, 
 0:59 and it's going to be a purchase so I want the price 
 1:02 and then the next thing down here is going to be the set to process,
-1:07 for lack of a better word, so here we'll say for p in data, 
+1:07 for lack of a better word, so here we'll say for p in data:, 
 1:11 so what we want is we want to go through all the data, 
 1:17 grab out every one of those we are going to call it this p 
 1:20 and we are going to pull out the price, now we could pull things like a tuple, 
@@ -29,7 +29,7 @@
 1:30 let's say city, maybe we'll get something there and I could just print prices,
 1:36  I think in this case I need some parenthesis, yes, 
 1:40 one of the rare cases where tuples need parenthesis, 
-1:43 and let's just say return so it doesn't actually crush. 
+1:43 and let's just say return so it doesn't actually crash. 
 1:46 And notice, we looped through here and here is the price,
 1:49 here is the number of beds, here is the city, price, beds, 
 1:54 price, beds city, 
@@ -70,7 +70,7 @@
 3:57 and let's get back here like so, 
 4:01 and so what we'll get is a list of two bedroom homes 
 4:04 and then down here we can say the average price is going to be the mean, 
-4:07 now if we try to give it two bedroom homes, remember, this was crushing, 
+4:07 now if we try to give it two bedroom homes, remember, this was crashing, 
 4:10 so as I don't know what to do with, purchases, 
 4:13 but we can go into this set and we can just write in line here 
 4:17 and say what I would like is p.price for p in this. 
@@ -83,13 +83,12 @@
 4:41 maybe we could round this off here, 
 4:44 so we'll just use the round function here, 
 4:47 so the average two bedroom home in Sacramento that was for sale 
-4:53 were actually sold in 2008 was sold for 165 000 dollars,
+4:53 were actually sold in 2008 was sold for 165,000 dollars,
 4:57  it had 1.4 baths and the square footage of 957.2 square feet. 
 5:03 How cool is that? 
 5:05 All right, so this concept here is called a list comprehension,
-5:11  and it's really cool, it has some performance benefits, 
+5:11 and it's really cool, it has some performance benefits, 
 5:16 and some performance drawbacks. 
 5:17 You will see that there is something extremely similar to it, 
 5:20 called a generator expression, 
-5:22 but first let's look at the concept of list comprehensions. 
-
+5:22 but first let's look at the concept of list comprehensions.

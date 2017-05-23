@@ -1,11 +1,11 @@
- 0:00 This code is working perfectly in Python 3, as we saw. 
+0:00 This code is working perfectly in Python 3, as we saw. 
 0:05 Let's see how it works in Python 2. 
 0:07 Now, there is a minor problem we are going to run into with our file IO 
 0:11 here so we'll solve that really quickly,
 0:13 but let's go add it the configuration and say 
 0:15 hey, let's try to run this under Python 2.7.10. 
 0:18 No module named statistics. 
-0:23 Well, we need that, right, we are using statistics.mean it turns out, 
+0:23 Well, we need that, right?, we are using statistics.mean it turns out, 
 0:28 statistics was introduced later on in Python, 
 0:31 I think it was 3.4 but somewhere around that time frame, and it's definitely not in 2.7, 
 0:36 so what do we do, do we just say well, 
@@ -15,9 +15,9 @@
 0:45 we are going to have to just write our entire own statistics mechanism. 
 0:49 I suppose there is some answer out on PyPi but as a way of demonstration, 
 0:53 let me show you how we can fix this. 
-0:56 so that's the line where this is crushing, 
+0:56 so that's the line where this is crashing, 
 0:58 and if you don't know for sure, you click here it says line 3 click 
-1:01 and it will navigate you right there, yeah, it looks like that's the line that's crushing, 
+1:01 and it will navigate you right there, yeah, it looks like that's the line that's crashing, 
 1:04 and that's because there is no statistics module. 
 1:07 So what we can do, we are going to dig into this error handling later, 
 1:10 just roll with it here ok, what we are going to do is 
@@ -45,8 +45,8 @@
 2:28 let's go run it back on Python 3, works, right, 
 2:34 here is our mean method, now this is going to return 0, 
 2:36 we are going to put real numbers there in a minute, 
-2:37 but let's just see that it doesn't crush in the same place, 
-2:40 there is going to be another crush we'll deal with hold on. 
+2:37 but let's just see that it doesn't crash in the same place, 
+2:40 there is going to be another crash we'll deal with hold on. 
 2:44 Look, no errors, there is this problem with encoding 
 2:46 and it turns out that this do like so, turns out that that didn't work in Python 2.7 
 2:53 exactly in that manner, so we'll drop it, but now watch this, 
@@ -57,7 +57,7 @@
 3:13 So I guess it's up to us to go write some kind of a mean method, 
 3:17 so we'll have total=0 we'll have count=0, now we could do len of data 
 3:26 but if it's a generator it's better if we just do it this way,
-3:29 for x in data, count +=1, total+=x 
+3:29 for x in data:, count +=1, total+=x 
 3:37 and now we want to return total divided by count, 
 3:40 unless that's 0 then that's king of be a problem so then we could say 
 3:43 max of 1 and count so that way a count of 0 we won't get it 
@@ -74,5 +74,4 @@
 4:35 but we for the purposes of this file, 
 4:37 we sort of replaced the same name here as statistics. 
 4:41 There is a lot to know about writing code that runs on Python 3 and Python 2, 
-4:46 here is just one example hopefully you'll find this useful. 
-
+4:46 here is just one example hopefully you'll find this useful.

@@ -1,5 +1,5 @@
- 0:00 Ok, so that was kind of  a cool start, but let's just save this here 
-0:04 and call this load file basic or something like that, 
+0:00 Ok, so that was kind of  a cool start, but let's just save this here 
+0:04 and call this load_file() basic or something like that, 
 0:07 I'll leave it commented you can have that if you like, 
 0:10 but now what we are really going to do is something a little bit better, 
 0:14 we are going to go over here and use a module called csv, 
@@ -14,7 +14,7 @@
 0:45 well, what is that iterable, here is one, fin, 
 0:49 so we want to get the header out, like so, 
 0:54 and we'll capture the reader, 
-0:57 like so and then we can say for row in reader I can just print row, 
+0:57 like so and then we can say for row in reader: I can just print row, 
 1:02 let's see what happens here. 
 1:05 Perfect, look at that, 
 1:07 it's already done the parsing and the reader has a lot of support 
@@ -35,8 +35,8 @@
 2:11 what if 4 means beds, of course it does, right, 
 2:14 that means nothing to humans, 
 2:16 so we can come over here and actually do better than this, 
-2:18 we can come over and say reader=csv.dict reader. 
-2:26 Now, dict reader doesn't return rows it returns a dictionary for each row, 
+2:18 we can come over and say reader=csv.DictReader(). 
+2:26 Now, DictReader doesn't return rows it returns a dictionary for each row, 
 2:31 so instead of using numbers to find the data, we use the names, 
 2:35 what names- the column names, 
 2:37 so we come over here and give it the same iterable 
@@ -55,5 +55,4 @@
 3:23 It gives you a lot more durability you don't have to know that like 
 3:26 the fifth element is actually the bed count and if that changes it's fragile, 
 3:31 all that sort of stuff, it just detects it and then builds up these dictionaries for you.
-3:35 So what are dictionaries, let's take a moment and look at this core concept. 
-
+3:35 So what are dictionaries, let's take a moment and look at this core concept.

@@ -1,4 +1,4 @@
- 0:00 Ok so we've gotten our data out of the comma separated value file, 
+0:00 Ok so we've gotten our data out of the comma separated value file, 
 0:03 converted it into our purchase class 
 0:06 and we've got it a list of those and we are passing it to the query data method,
 0:11 now in this method we are supposed to answer 4 basic questions,
@@ -8,7 +8,7 @@
 0:21 and what is the average price of a two bedroom house. 
 0:23 So some of these are really easy to answer, 
 0:26 some of them take a little bit more work. 
-0:28 So if we say data . 
+0:28 So if we say data '.' 
 0:30 PyCharm knows it's been able to detect 
 0:33 that we are sending a list and it's retracted back from the load data 
 0:37 back to the main method and down into here 
@@ -19,7 +19,7 @@
 0:51 if we want and it doesn't affect the way it runs 
 0:55 but will give us some help 
 0:58 and we can say this is a list of purchase objects, 
-1:00 now if I say data . again we get our list stuff 
+1:00 now if I say data '.' again we get our list stuff 
 1:05 but if I go to individual item you can see we have our baths, beds and so on. 
 1:08 So that might make things a little bit easier, ok, 
 1:10 so the question is what is the most expensive house, 
@@ -28,14 +28,14 @@
 1:19 so we can say if data was sorted by price, 
 1:23 it would be really easy to get the most expensive 
 1:26 and least expensive purchase 
-1:27 so we could say high purchase = and this is a list,
+1:27 so we could say high_purchase = and this is a list,
 1:32 remember, if it was sorted form low to high,
 1:35 high purchase would be the last one, 
 1:37 so we can just say minus 1, 
 1:39 this is a beautiful thing about Python, 
 1:41 and let me move this over like so, 
 1:44 and the low purchase would just be data zero. 
-1:47 Again, we are assuming there is some data this would crush if data is empty, 
+1:47 Again, we are assuming there is some data this would crash if data is empty, 
 1:51 but how do we sort it, well, that's super easy, 
 1:55 we could go over here and we could say data 
 1:57 there is two ways we can do this,
@@ -45,10 +45,10 @@
 2:11 so then we can say sort notice, we can specify a key, 
 2:15 so we can say this, we can say the key I want you to sort by is something, 
 2:21 now let me write something that might seem a little weird here to you, 
-2:24 say def get price. 
+2:24 say def get_price(). 
 2:27 And we'll give it a purchase, 
 2:28 so if we are given a purchase we could say return p.price. 
-2:32 So if I go down here and say get price
+2:32 So if I go down here and say get_price
 2:35 and I don't call it but I just say the method name, 
 2:38 when it's time to sort, when it's time to get the key to sort on, 
 2:42 the list here will actually call this function on each element, 
@@ -58,7 +58,7 @@
 2:56 let's just do a print of high price.price,
 3:00 and down here we'll do a print, we'll do a better print in a moment,
 3:03 but say low price.price. 
-3:06 Remember, this should be like 800 000ish, this should be 1500. 
+3:06 Remember, this should be like 800,000ish, this should be 1,500. 
 3:09 Let's find out. 
 3:11 Well, it looks like my cool little trick to get the type hints here isn't working so well,
 3:17 let's take that away again. 
@@ -93,16 +93,15 @@
 4:47 So let's just like make this output a little bit nicer here, 
 4:50 we'll say print the most expensive house is 
 4:57 so here we've cleaned it up, 
-4:59 the most expensive house is 884 000 dollars 
-5:02 and the least expensive house is 1551 
+4:59 the most expensive house is 884,000 dollars 
+5:02 and the least expensive house is 1,551 
 5:06 maybe we want to say little more information about it, 
 5:09 like with some number of bedrooms and some number of baths, 
 5:14 because we are using our class this is super easy we just say beds baths, 
 5:21 4 beds, 3 baths, we can do something very similar, for the least expensive. 
 5:29 What do you guys think, is that a good deal, 
-5:31 1500 dollars for a 3 bedroom 3 bath house, 
+5:31 1,500 dollars for a 3 bedroom 3 bath house, 
 5:34 I have no idea what happened there, 
 5:36 let's take a moment and look at this core concept of lambda expressions 
 5:39 and then we'll go on to answer the more interesting question 
-5:42 that involve little bit more math. 
-
+5:42 that involve little bit more math.

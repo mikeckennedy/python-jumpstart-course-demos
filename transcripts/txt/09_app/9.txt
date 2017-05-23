@@ -1,4 +1,4 @@
- 0:00 Let's take a moment and talk about a core concept called lambdas. 
+0:00 Let's take a moment and talk about a core concept called lambdas. 
 0:03 In Python, functions and methods are first class citizens. 
 0:08 That means they have their own type, they can be passed as arguments, 
 0:11 and they can be treated as like a class or other elements in the language, 
@@ -23,5 +23,4 @@
 1:18 and that's exactly what comes back,
 1:20 you'll find lambdas to be a key part of the language, 
 1:22 and the more you dig into Python, the more you see that they are up here 
-1:26 and they are helpful all over the place. 
-
+1:26 and they are helpful all over the place.

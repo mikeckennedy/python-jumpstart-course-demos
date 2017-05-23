@@ -18,7 +18,7 @@
 0:55 but we can actually do better still 
 1:00 so this is a generator method, this is a regular one,
 1:03 but we can also apply the exactly same idea here and the same idea here, 
-1:07 now this gets a little tricky because I have to say for m in matches yield m, 
+1:07 now this gets a little tricky because I have to say for m in matches: yield m, 
 1:14 now, that's not the most fun thing to write, 
 1:16 it would work but I'll show you something better, 
 1:17 same thing down here for all the matches there we want to do that, 
@@ -28,8 +28,8 @@
 1:30 it's going to go until it hits one of these, 
 1:33 which the generator and it's going to hand one back 
 1:36 so if we only wanted the first 4 matches 
-1:39 we could compute that extremely quickly, 
-1:40 however, this line 65, 66 this is not the coolest thing, 
+1:39 we could compute that extremely quickly.
+1:40 However, this line 65, 66 this is not the coolest thing, 
 1:44 it turns out that python 3.3 added basically a keyword that will do the same thing
 1:51 like take a whole set and sort of hand them back one at a time, 
 1:54 and so we can simplify this and just say yield from matches, 
@@ -70,8 +70,7 @@
 4:10 is a single line in memory, ok, 
 4:13 great we do have the file stream open to some huge file at some point, 
 4:16 but we are seeking over, we are streaming across it. 
-4:20 Let's just let it run and see where it goes. 
-4:22 
+4:20 Let's just let it run and see where it goes.
 4:28 It's done, look at that, 
 4:29 look at the memory usage, look at the CPU, 
 4:34 look at the performance, it is so much better than it was before, 
@@ -98,5 +97,4 @@
 5:49 to create these pipelines basically effortlessly, 
 5:52 we'll see that there is even a simpler way to create
 5:55 this type of structure something called a generator expression, 
-5:58 right, but we'll save that for the next app. 
-
+5:58 right, but we'll save that for the next app.

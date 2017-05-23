@@ -1,4 +1,4 @@
- 0:01 So let's look at the code again that we are using our list comprehension, 
+0:01 So let's look at the code again that we are using our list comprehension, 
 0:05 and you can see I've changed it a little bit. 
 0:07 Down here on line 107 I've written a method called announce, 
 0:12 and now what it does is if you pass an item to announce, 
@@ -44,8 +44,8 @@
 2:21 you'll see even though we are only processing 5 homes, 
 2:24 we are going through look at this, 
 2:27 every single home we basically process the entire data stream and then, 
-2:31 we go back and oh, actually only of the first five two bedroom homes, 
-2:36  what would be much better is to just stop
+2:31 we go back and oh, actually only of the first five two bedroom homes,
+2:36 what would be much better is to just stop
 2:38 after we get to the first five two bedroom homes,
 2:41 so what do we have to do to change this? 
 2:44 Well, for list you use square brackets, 
@@ -85,5 +85,4 @@
 4:29 and later generator expressions to replace procedural operations 
 4:33 with more declarative ones, 
 4:35 and get the performance benefits of generator methods 
-4:39 without actually writing methods at all. 
-
+4:39 without actually writing methods at all.

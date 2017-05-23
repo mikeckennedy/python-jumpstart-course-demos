@@ -1,4 +1,4 @@
- 0:00 For our final concept in this app, let's look at building data pipelines out of generators. 
+0:00 For our final concept in this app, let's look at building data pipelines out of generators. 
 0:05 Now, these generators could be created from generator methods
 0:09 or generator expressions. 
 0:12 So let's see how we might use this to answer 
@@ -47,5 +47,4 @@
 2:19 you can take one generator and pass it to the next 
 2:22 and then take that generator and pass it to the next and it creates 
 2:25 this really cool pipeline of processing that's extremely efficient 
-2:29 and it doesn't even require us to write methods. 
-
+2:29 and it doesn't even require us to write methods.

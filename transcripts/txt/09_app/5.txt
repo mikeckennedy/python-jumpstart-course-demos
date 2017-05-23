@@ -1,4 +1,4 @@
- 0:00 Let's put our app aside for just a minute and talk about dictionaries
+0:00 Let's put our app aside for just a minute and talk about dictionaries
 0:03 We can create dictionaries in a variety of ways 
 0:06 and depending on how you want to store data, 
 0:08 one way makes more sense than the other. 
@@ -55,11 +55,11 @@
 3:35 One use case of this is sort of storing in an individual item disparate data like so 
 3:41 like level name or age and location. 
 3:44 Another one might be you have a bunch of similar data 
-3:46 like what if I got a 100 000 users back from a database query or from a web service, 
+3:46 like what if I got a 100,000 users back from a database query or from a web service, 
 3:51 and I'd like to be able to quickly pull them back by ID, almost like a database, 
-3:56 like in memory I'd like say give me user 2711, bam, 
+3:56 like in memory I'd like say give me user 2,711, bam, 
 4:01 and I want that back instantly, not seeking over an index, 
-4:05 not seeking over a list and doing 2000 comparisons and then finally going 
+4:05 not seeking over a list and doing 2,000 comparisons and then finally going 
 4:08 oh here is the one you were looking for, but instantly finding it basically. 
 4:11 So I have a little bit of code I stash here, look at that, 
 4:14 so here we have our users 
@@ -73,7 +73,7 @@
 4:39 any time I want if I have a million users if I have their id I can get them back ultra fast 
 4:44 so I want to know what the user with id 3 looks like, we'll let's run it, bam, 
 4:49 that's user 3 with email user3@talkpython.fm. we could use a different index, 
-4:54 we could use email, now if I run this it's going to crush, 
+4:54 we could use email, now if I run this it's going to crash, 
 4:58 I say I want the user with the key of that email address boom, 
 5:01 there is that user right there. 
 5:04 So we can look them up by whatever we want, 
@@ -87,5 +87,4 @@
 5:32 we can access the part. 
 5:35 It's more this top style that we are going to use for our csv file, 
 5:38 so let's take a moment, look at this core concept, 
-5:40 and then we'll go back to working on our real estate data mining app. 
-
+5:40 and then we'll go back to working on our real estate data mining app.

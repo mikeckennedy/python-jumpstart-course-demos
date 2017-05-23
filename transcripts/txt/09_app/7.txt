@@ -1,10 +1,10 @@
- 0:00 Ok, we saw that the csv dict reader was really the way to go
+0:00 Ok, we saw that the csv dict reader was really the way to go
 0:04 from the text file into memory for comma separated data. 
 0:09 Now, there are still some things that are not quite perfect, 
 0:13 like imagine I was given this data, I would somehow want to go through it,
 0:18 if you asked me what is the average number of beds, well,
 0:21 I still have to know every single time to say quote beds, 
-0:24 and if I say bed instead of beds, crush, that's not great. 
+0:24 and if I say bed instead of beds, crash, that's not great. 
 0:29 It's not discoverable what all the rows are, 
 0:33 and the rows all come back as text even though beds represent a number, 
 0:38 it's just a string that came out of the text file so if I look at the type here, 
@@ -21,11 +21,10 @@
 1:24 but within the context of our real estate app 
 1:26 hopefully the real estate component is clear. 
 1:28 Now, I am going to show you something that you've not seen in this class about classes,
-1:32 what we have done so far is we have defined a dunder init 
+1:32 what we have done so far is we have defined a __init__() 
 1:36 and we are going to do that again here, 
 1:39 let me just really quickly sketch out the pieces that are going to go in here, 
 1:41 you don't need to see me type this, ok, 
-1:42 
 1:46 so now I've sketched out a fairly complicated initialization method but you know, 
 1:52 it's just a matter of what pieces of data you want to store in here and where do we go. 
 1:56 Now, we could go back to program and make it this method, 
@@ -35,14 +34,13 @@
 2:11 But, this class already knows the structure and it knows the pieces that it expects, 
 2:16 so let's make this class responsible for creating other ones, ok.
 2:21 So we can come over here and define the method, 
-2:24 let's just call this create from dict, something like this, 
+2:24 let's just call this create_from_dict(), something like this, 
 2:29 and we'll call this a lookup, or something like that, ok, 
 2:34 we will come down here we will say something this, 
 2:36 return purchase and we are going to allocate one of these things, 
 2:40 the first thing that goes in here is going to be the street 
 2:43 so we would say lookup of street like so, 
 2:46 again just let me type this out and I'll skip ahead,
-2:49 
 3:00 ok, so I wrote this method, now there is a few more things to do here, 
 3:04 we want to convert the number of beds into an integer, so we need to parse this, 
 3:07 similarly we want to convert the number of baths the square footage, 
@@ -55,7 +53,7 @@
 3:33 But, let's try to use this method this is not going to be so cool,
 3:39 so come over here to our program, let's go ahead and make a purchases list here, 
 3:45 so we are just going to store all the purchases basically one for each row, 
-3:48 let's say purchases.append purchase, 
+3:48 let's say purchases.append() purchase, 
 3:52 let's just say p, keep it short to fit on the screen, 
 3:54 so we'll say p=purchase, we need to import this, 
 3:59 if I try this, it's- let's give it the row here, 
@@ -77,12 +75,12 @@
 4:57 and the way we do that is we add what is called a decorator, 
 5:00 a decorator starts with the @ symbol, 
 5:01 and they have a cool color in PyCharm, 
-5:04 so we can say @static method there is other things you can say, 
+5:04 so we can say @staticmethod there is other things you can say, 
 5:07 you can say @property, and define the method that would be a property 
 5:12 instead of a method and so on, 
 5:14 what we are going to use is static method 
 5:16 and that lets us go back here and instead of requiring an instance we say like this,
-5:23 purchase.create from lookup and it only takes the dictionary here,
+5:23 purchase.create_from_lookup and it only takes the dictionary here,
 5:28 so let's go and append these, and let's top the print out here, I'll just delete those, 
 5:33 when we are done, I'll just print let's just print the first entry, 
 5:37 our first class, all right, run this- oops, 
@@ -97,5 +95,4 @@
 6:15 what will be in this list, this will be our specifically typed purchase class that has to do,
 6:21 that knows specifically about the data containing here 
 6:23 and we can leverage that to help us do math like ask
-6:27 what is the average number of bathrooms and so on...
-
+6:27 what is the average number of bathrooms and so on.

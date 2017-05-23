@@ -1,4 +1,4 @@
- 0:00 Let's take a moment and look at this core concept 
+0:00 Let's take a moment and look at this core concept 
 0:02 of one mechanism for supporting both Python 2 and Python 3. 
 0:06 You saw in our previous example that we wanted to use
 0:09 the statistics module to compute the mean, 
@@ -24,7 +24,7 @@
 1:10 if it doesn't work it's going to throw an exception 
 1:14 and we could actually catch the right type of exception, 
 1:16 we'll get into exceptions later in the next app, 
-1:18 but it's easy enough for us to go and write the statistics to stand in.py 
+1:18 but it's easy enough for us to go and write the statistics to stand_in.py 
 1:24 and we define a mean method and it takes the same parameters 
 1:27 as the real one and the implementation you saw in the previous example write it, 
 1:31 it was quite easy. 
@@ -37,5 +37,4 @@
 1:53 and we are going to actually give it the name statistics
 1:56  for this particular file and since it's a mean method, 
 1:58 the statistics.mean it works exactly as we would expect. 
-2:02 Boom, now our code works on all the versions of Python, just like that. 
-
+2:02 Boom, now our code works on all the versions of Python, just like that.

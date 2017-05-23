@@ -1,8 +1,8 @@
- 0:01 So now it's time to load the data, 
+0:01 So now it's time to load the data, 
 0:03 we've got everything just lined up for us to grab this file and run with it. 
 0:05 Let's do a quick little context manager 
 0:07 we'll do a with open file name as we'll do read only text, 
-0:12 and let's go and set the encoding, to utf 8,  
+0:12 and let's go and set the encoding, to utf-8,  
 0:17 remember, this is the file we are going after and it's right at the top 
 0:22 you can see we have the street then the city,
 0:25 then the zip code, then the state, beds, bath and so on, 
@@ -17,25 +17,25 @@
 0:53 The first thing we need to do is capture the header, 
 0:55 and that's not the thing of the top that we are printing out but you know,
 0:58 the sort of column names at the top of this, 
-1:00 so we can say fin.readline singular 
+1:00 so we can say fin.readline() singular 
 1:03 and we could do something like print found header, 
 1:06 to be and then we'll just print that out. 
 1:08 And then the next thing we need to do is we need to go through 
 1:12 line by line and turn this into some kind of data structure, 
 1:15 we'll start simple and we'll get something more interesting in a minute, 
-1:18 so we can say for line in fin, now we could have just started out this way
+1:18 so we can say for line in fin:, now we could have just started out this way
 1:23 but remember the first line is the header 
 1:26 and then every subsequent line is actually the data, 
 1:28 so we do one read line and then we stream over it, 
 1:31 and we need to turn the line into the individual columns of data 
 1:36 and with the csv comma separated value one way let's call this line data, 
-1:42 one way to do this would be to say line.split and we can just split on the comma, 
+1:42 one way to do this would be to say line.split() and we can just split on the comma, 
 1:47 now this is not perfect because you'll see that there are ways 
 1:50 to like escape commas and so on 
 1:52 and the edge cases can be a little bit tricky, 
 1:55 so we are not going to end up using this, 
 1:57 but let me just print out well, let's build up all this we'll say lines, 
-2:00 and we'll gather this here, and we'll say lines.append line data, 
+2:00 and we'll gather this here, and we'll say lines.append(line_data), 
 2:06 and then let's just print out let's say the first bunch here so we'll say print lines, 
 2:11 we don't want all like thousands of lines, so let's just say we'll take the first line,
 2:15 remember we can slice from 0 to 5 and just get the first lines like so. 
@@ -45,7 +45,7 @@
 2:27 the string for Sacramento, now there is two lists here, 
 2:30 and we have basically a list of lists, 
 2:34 that was the first row, that's the second row, 
-2:35 now notice the very last bit has a backslash n \n 
+2:35 now notice the very last bit has a \n 
 2:39 and that's because it's coming form when we read a line out of a file, 
 2:43 a text file in Python it keeps that on the end there, 
 2:46 so let's do a strip and we can strip the bits off the front and the back 
@@ -62,6 +62,5 @@
 3:27 because this actually comes back as a string so I need to parse it and so on,
 3:31 but this is sort of the basic way of working with this data. 
 3:34 So that is kind of how we would attack csv files from scratch, 
-3:39 but Python has built in support for csvs and we can do better, 
-3:43 so let's use the csv module and then build on that. 
-
+3:39 but Python has built in support for csv and we can do better, 
+3:43 so let's use the csv module and then build on that.

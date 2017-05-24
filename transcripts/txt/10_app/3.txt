@@ -1,25 +1,25 @@
- 0:00 Let's just play around with this api really quick, 
+0:00 Let's just play around with this api really quick, 
 0:02 get the general idea of it and then we'll structure into a proper program, ok? 
 0:07 So our url is going to look something like this 
 0:09 and we search for capital 
 0:11 and so let's make it really clear that there is some search text that goes right there. 
-0:16 So we'll say search=this and then we'll do a .format, with the search. 
+0:16 So we'll say search=this and then we'll do a .format(), with the search. 
 0:21 Now what we are going to do is we are going to work wit Request 
 0:23 we've used that a few times and it's been really great,
 0:26 we are also going to work with named tuples again, 
 0:28 so while I am here let me just type import collections. 
 0:31 So what I want to do is go and download this data 
-0:34 so we'll say r for response=request.get url. 
+0:34 so we'll say r for response=request.get(url). 
 0:38 Now, I should test our .status code and all those things 
 0:42 but we are just playing around, 
-0:45 so I am going to pull this back  and say 
+0:45 so I am going to pull this back and say 
 0:45 the data is going to come back in json format 
 0:47 so instead of taking that as a string, 
 0:49 we are going to convert that to dictionaries and lists 
 0:53 and primary sort of fundamental values like numbers and dates and so on. 
 0:58 So remember how the results come back,
 1:00 there is an outer json object, a dictionary, it has a key called Search, capital S
-1:06 is in this case instead of, and in there, there is an array, 
+1:06 it is case sensitive, and in there, there is an array, 
 1:08 and this is what we are really after. 
 1:10 So let's go over here and we'll say results and just write this 
 1:14 like it's going to work and then we can add error handling, later. 
@@ -48,7 +48,7 @@
 2:33 so for this to work in the cool and sleek way that I am proposing, 
 2:37 the values need to have exactly the same name as they do in the dictionary, 
 2:42 and they are not really matching Pythonic style with lower case elements, 
-2:46 upper case, more something like CSharp or C++ 
+2:46 upper case, more something like C# or C++ 
 2:50 but we are going to make it work here. 
 2:53 All right, so let's take this and instead of having this dictionary that we use strings against,
 2:58 we'll have a strongly typed element called movie results, right, 
@@ -58,9 +58,9 @@
 3:13 in two dimensions if you will, 
 3:15 and then I'll show you two cool ways to improve this 
 3:18 so we are going to have a list, 
-3:21 we are going to say for result in results, plural, 
+3:21 we are going to say for result in results:, plural, 
 3:24 now I want to create a movie, it's going to be a movie result 
-3:28 and in here we want to say things like title=results of title, 
+3:28 and in here we want to say things like title=results['Title'], 
 3:33 and we can just knock this out like so, 
 3:38 ok so now we have a movie result, 
 3:40 let me just print out m as we loop across these so let's run this, ok, 
@@ -75,9 +75,8 @@
 4:11 we are converting that or upgrading it if you will into a movie result 
 4:15 and if we print it we can see them there, that's great, 
 4:19 but what we wanted to do is actually store these into our list 
-4:22 so we'll say movies.append (m), and then down at the bottom, 
+4:22 so we'll say movies.append(m), and then down at the bottom, 
 4:27 let's just print out the first one again.
-4:32 Print movies of 0, awesome, 
+4:32 print(movies[0]), awesome, 
 4:34 so you can see our movie result was converted properly 
-4:35 title is this poster is that and so on. 
-
+4:35 title is this poster is that and so on.

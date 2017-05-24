@@ -1,4 +1,4 @@
- 0:00 Here you are at the end of the class, you've made it through all ten applications, 
+0:00 Here you are at the end of the class, you've made it through all ten applications, 
 0:04 I hope you really enjoyed your time learning Python 
 0:07 and found this to be a really productive and engaging way to learn. 
 0:12 I want you to congratulate yourself, 
@@ -21,4 +21,4 @@
 1:16 with dashes separating it, and you know, 
 1:18 start the repository or bookmark it, something like that, 
 1:21 I want this to be a resource you can come back to 
-1:24 as you learn more throughout your Python career. 
+1:24 as you learn more throughout your Python career.

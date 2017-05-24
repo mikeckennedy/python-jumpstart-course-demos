@@ -1,9 +1,9 @@
- 0:00 Let's talk briefly about where are we going to get these movie information 
+0:00 Let's talk briefly about where are we going to get these movie information 
 0:03 and what we are going to search for anyway. 
 0:06 So we are going to use the OMDB API, 
 0:09 the open movie database API, so that's omdbapi.com 
 0:14 and this is a free service where we can go and do queries 
-0:17 against presumably imdb type of information 
+0:17 against presumably imdb type of information
 0:21 and you see it says the API looks like this, 
 0:24 and notice that you can get poster images as well, 
 0:28 so if you want to get the particular poster you are going to need an API key
@@ -37,5 +37,4 @@
 2:05 we will parse it and then each one of these is going to come back like so,
 2:08 and when we parse that from json, 
 2:10 it will come back as a dictionary with a key of title, a key of year and so on. 
-2:13 And let's go get the searching. 
-
+2:13 And let's go get the searching.

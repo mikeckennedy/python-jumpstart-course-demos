@@ -1,4 +1,4 @@
- 0:00 Let's review what you've learned in each one of these apps. 
+0:00 Let's review what you've learned in each one of these apps. 
 0:03 When I first introduced the apps I told you what you are going to learn 
 0:06 but you had never seen it so you know, 
 0:08 it probably didn't really resonate the way it will now. 
@@ -45,15 +45,15 @@
 2:26 so we talked about the dunder name convention, 
 2:28 to differentiate between when your program itself is being run 
 2:32 and when your script is being reused. 
-2:35 Also we talked about documenting your own code with doc strings.
+2:35 Also we talked about documenting your own code with docstrings.
 2:38 App number 5, this was our weather forecast app 
 2:41 and we went out to weather underground 
 2:43 and we grabbed the html and we did that using a technique called screen scraping 
 2:47 by making an http request, using the request package pulling that down, 
-2:51 taking the html, send it off to the Beautiful Soup package 
+2:51 taking the html, send it off to the BeautifulSoup package 
 2:54 and then writing css selectors against that in memory 
 2:58 to actually pull out the data we want. 
-3:00 In order to get Requests and Beautiful Soup, which are external packages, 
+3:00 In order to get Requests and BeautifulSoup, which are external packages, 
 3:04 we used pip and we could further isolate our particular environment in our application 
 3:11 using virtual environments. 
 3:13 Along the way I also got to introduce you to a very Pythonic concept called slicing.
@@ -73,18 +73,18 @@
 4:01 and model your data structures with classes, 
 4:04 and inheritance allows us to sort of separate that into layers, 
 4:06 so it's more reusable, more manageable Python has magic methods, 
-4:10 sometimes are referred to as dunder methods, like dunder init, dunder str, 
+4:10 sometimes are referred to as dunder methods, like __init__(), __str__(), 
 4:15 for overwriting behaviors of our classes, 
-4:18 our objects for example we can write the dunder init 
+4:18 our objects for example we can write the __init__()
 4:21 to take control over the creation and initialization of our objects, 
 4:24 and speaking of initialization, we saw when we are doing inheritance 
 4:28 that you need to be careful about chaining these together in the correct order 
 4:33 so the whole hierarchy get setup correctly. 
-4:35 Typically, this is where you define your fields and these dunder init methods 
+4:35 Typically, this is where you define your fields and these __init__() methods 
 4:39 and when we are using our objects you don't have static typing in Python, 
 4:44 instead we use something called duck typing to achieve polymorphism. 
 4:47 In application 8, we built a file searcher app and we got to feed a ton of data to it, 
-4:53 remember we had our 2.27 GB of text what we were searching with this thing, 
+4:53 remember we had our 2.27GB of text what we were searching with this thing, 
 4:58 so in order to make that much more performant and efficient 
 5:02 we used generator methods using the yield and yield return keywords, 
 5:07 and because we were trying to process a hierarchy, a tree of data, the file structure, 
@@ -93,7 +93,7 @@
 5:23 on the Sacramento real estate market in 2008 I believe it was. 
 5:27 And we loaded that up, we did all sorts of interesting processing on it, 
 5:31 we saw that at the heart of Python are dictionaries, 
-5:34 and dictionaries of course played a key role  in our comma separated value processing as well; 
+5:34 and dictionaries of course played a key role in our comma separated value processing as well; 
 5:39 we wanted to sort the data that we got back out of that file 
 5:41 and we did that by passing a method 
 5:44 we saw that methods were first class objects in Python, 
@@ -128,7 +128,7 @@
 7:29 like a laptop where it could be out of wi-fi range or whatever. 
 7:32 So we need to be able to handle those errors 
 7:34 we introduced the try except block to do that,we also saw that you can use multiple except blocks
-7:39 to handle errors by type, remember,  put them both specific one first the most general one last, 
+7:39 to handle errors by type, remember, put them both specific one first the most general one last, 
 7:44 we also talked about validating arguments by raising errors;
 7:48 we had some kind of argument pass doing init method for a class 
 7:52 the init method doesn't have a return value 
@@ -136,4 +136,3 @@
 7:58 but we still want to validate the arguments coming in 
 8:01 and so we saw that we could raise an exception when invalid data was passed 
 8:05 and then the object would never even be created unless it started out in a valid state.
-

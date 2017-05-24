@@ -1,4 +1,4 @@
- 0:00 If this class has made a difference for you 
+0:00 If this class has made a difference for you 
 0:02 if you feel like you've learned Python like you haven't before,
 0:04 if you had fun while you were doing it, 
 0:07 I would really appreciate if you could send out a little bit of love on social media, 
@@ -24,4 +24,3 @@
 1:15 Thank you so much, it's been great to share this time with you 
 1:18 and I hope you've learned Python in a fun and engaging way. 
 1:21 Thanks and goodbye.
-

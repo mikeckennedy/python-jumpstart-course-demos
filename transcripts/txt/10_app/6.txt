@@ -1,4 +1,4 @@
- 0:00 We have our network working again, we searched for cats and dogs, 
+0:00 We have our network working again, we searched for cats and dogs, 
 0:03 we should get things about cats and dogs, but if we turn off it's going to crash.
 0:09 Not so great. 
 0:11 Another thing maybe we want to do is we might want to check 
@@ -13,24 +13,24 @@
 0:42 often exceptions are the preferred way to do things in Python. 
 0:46 So let's come down here and well do a little test 
 0:49 and we can say something like this, 
-0:51 if not search text or not search text.strip, 
+0:51 if not search text or not search text.strip(), 
 0:56 we need this first test here because if search text comes in as none,
 1:01 this will actually give us an exception trying to call it strip on none, ok. 
 1:06 So either it's empty or it's not entirely empty but it's white space, 
 1:11 then we want to basically cause some kind of error, 
 1:15 we want to report an error back 
-1:17 and we can say raise value error, it's one possible option here, 
+1:17 and we can say raise ValueError, it's one possible option here, 
 1:22 we can say so let's try this, if I go down here and I hit cats, 
-1:25 I should get network error, if I come down here 
-1:29 and I hit empty value error you must specify a search string, 
+1:25 I should get NetworkError, if I come down here 
+1:29 and I hit empty ValueError you must specify a search string, 
 1:33 ok, so we are no longer going to be sort of sending off meaningless searches 
 1:37 and in fact we can't create a movie client in a malformed state, 
 1:42 we'll never be able to even allocate and initialize an object 
-1:46 instead we'll raise this value error, ok. 
-1:48 Now, in both cases, it didn't really matter what we do, our app is crushing,
+1:46 instead we'll raise this ValueError, ok. 
+1:48 Now, in both cases, it didn't really matter what we do, our app is crashing,
 1:52 we'd like to just go no that didn't work, keep going, 
 1:55 so the way we do that in Python is we come down here 
-1:59 and we use what's called a try block so we say try, 
+1:59 and we use what's called a try block so we say try:, 
 2:02 and here is all the code we would like to interact with 
 2:04 and if anywhere along the way,
 2:06 if this allocation this initialization threw us an exception 
@@ -38,16 +38,15 @@
 2:13 because the network is down or something like this, 
 2:15 regardless of where the error happens, 
 2:17 we'd like to immediately start running there 
-2:20 and go deal with the error so we can say except, and for now, 
-2:22 we'll just say print yikes, that sucked, ok, 
+2:20 and go deal with the error so we can say except:, and for now, 
+2:22 we'll just say print('YIKES, THAT SUCKED'), ok, 
 2:26 so if we try this, notice there is a little warning here 
 2:29 but this should help let's go hit enter, yikes, that didn't work, 
 2:31 search for something else, oh, that didn't work, turn the network,
 2:36 if I come down here search for cats now, hey, it worked, 
-2:39 so it's no longer crushing, that's really good 
+2:39 so it's no longer crashing, that's really good 
 2:41 but you'll see that PyCharm is warning us about this 
 2:44 and we should improve it, it says, you are doing too broad of a catch, 
 2:49 you are just catching everything 
 2:51 and there is no meaningful information here giving back about it, 
-2:54 let's do that next. 
-
+2:54 let's do that next.

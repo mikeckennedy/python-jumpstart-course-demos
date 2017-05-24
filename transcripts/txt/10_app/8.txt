@@ -1,4 +1,4 @@
- 0:01 Let's close out application ten by looking at this concept of try except blocks.
+0:01 Let's close out application ten by looking at this concept of try except blocks.
 0:05 Here you can see we have a couple of methods that we are going to call,
 0:08 method one, two and three, and they may call other methods,
 0:10 and those methods call other methods, down deep into the Python standard library 
@@ -23,5 +23,4 @@
 1:05 if you have a more base error or a more generic 
 1:07 general error handling block at the top,
 1:10 super important to go from most specific 
-1:12 to least specific as you go through this. 
-
+1:12 to least specific as you go through this.

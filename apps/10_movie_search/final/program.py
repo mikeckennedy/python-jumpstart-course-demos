@@ -1,5 +1,6 @@
-from movie_client import MovieClient
+import movie_svc
 import requests.exceptions
+
 
 def main():
     print_header()
@@ -18,37 +19,24 @@ def search_event_loop():
 
     while search != 'x':
         try:
-            search = input('Title search text (x to exit): ')
+            search = input('Movie search text (x to exit): ')
             if search != 'x':
-                client = MovieClient(search)
-
-                results = client.perform_search()
+                results = movie_svc.find_movies(search)
                 print("Found {} results.".format(len(results)))
                 for r in results:
                     print('{} -- {}'.format(
-                        r.Year, r.Title
+                        r.year, r.title
                     ))
+                print()
+        except ValueError:
+            print("Error: Search text is required")
         except requests.exceptions.ConnectionError:
-            print('ERROR: Cannot search, you network is down.')
-        except ValueError as ve:
-            print('ERROR: Your search string is invalid: {}'.format(ve))
+            print("Error: Your network is down.")
         except Exception as x:
-            print("ERROR: {}".format(x))
+            print("Unexpected error. Details: {}".format(x))
 
     print('exiting...')
 
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-

@@ -3,50 +3,47 @@ import collections
 
 MovieResult = collections.namedtuple(
     'MovieResult',
-    'Title,Poster,Type,imdbID,Year'
-)
+    "imdb_code,title,duration,director,year,rating,imdb_score,keywords,genres")
 
-search = 'capital'
-url = 'http://www.omdbapi.com/?s={}&y=&plot=short&r=json'.format(search)
+search = input("What movie do you want to search for? ")
+url = 'http://movie_service.talkpython.fm/api/search/{}'.format(search)
 
-r = requests.get(url)
-data = r.json()
+resp = requests.get(url)
+resp.raise_for_status()
 
-results = data['Search']
+movie_data = resp.json()
+movies_list = movie_data.get('hits')
 
 # movies = []
-# for result in results:
+# for md in movies_list:
 #     m = MovieResult(
-#         Title=result['Title'],
-#         Poster=result['Poster'],
-#         Type=result['Type'],
-#         imdbID=result['imdbID'],
-#         Year=result['Year']
+#         imdb_code=md.get('imdb_code'),
+#         title=md.get('title'),
+#         duration=md.get('duration'),
+#         director=md.get('director'),
+#         year=md.get('year', 0),
+#         rating=md.get('rating', 0),
+#         imdb_score=md.get('imdb_score', 0.0),
+#         keywords=md.get('keywords'),
+#         genres=md.get('genres')
 #     )
 #     movies.append(m)
 
-# def method_with_kws(pos1, **kwargs)
-# pass
+# def method(x, y, z, **kwargs):
+#     print("kwargs=", kwargs)
+#
+# method(7, 1, z=2, format=True, age=7)
 
 # movies = []
-# for result in results:
-#     m = MovieResult(**result)
+# for md in movies_list:
+#     m = MovieResult(**md)
 #     movies.append(m)
 
 movies = [
-    MovieResult(**m)
-    for m in results
+    MovieResult(**md)
+    for md in movies_list
 ]
 
-print(movies)
-
-
-
-
-
-
-
-
-
-
-
+print("Found {} movies for search {}".format(len(movies), search))
+for m in movies:
+    print("{} -- {}".format(m.year, m.title))

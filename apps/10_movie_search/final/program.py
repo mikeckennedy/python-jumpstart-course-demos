@@ -1,4 +1,5 @@
 import movie_svc
+import requests.exceptions
 
 
 def main():
@@ -27,8 +28,12 @@ def search_event_loop():
                         r.year, r.title
                     ))
                 print()
-        except:
-            print("YIKES, that didn't work!")
+        except ValueError:
+            print("Error: Search text is required")
+        except requests.exceptions.ConnectionError:
+            print("Error: Your network is down.")
+        except Exception as x:
+            print("Unexpected error. Details: {}".format(x))
 
     print('exiting...')
 

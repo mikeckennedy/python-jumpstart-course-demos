@@ -49,16 +49,16 @@ def get_html_from_web(zipcode):
 
 
 def get_weather_from_html(html):
-    # cityCss = 'div#location h1'
-    # weatherConditionCss = 'div#curCond span.wx-value'
-    # weatherTempCss = 'div#curTemp span.wx-data span.wx-value'
-    # weatherScaleCss = 'div#curTemp span.wx-data span.wx-unit'
+    # cityCss = '.region-content-header h1'
+    # weatherScaleCss = '.wu-unit-temperature .wu-label'
+    # weatherTempCss = '.wu-unit-temperature .wu-value'
+    # weatherConditionCss = '.condition-icon'
 
     soup = bs4.BeautifulSoup(html, 'html.parser')
-    loc = soup.find(id='location').find('h1').get_text()
-    condition = soup.find(id='curCond').find(class_='wx-value').get_text()
-    temp = soup.find(id='curTemp').find(class_='wx-value').get_text()
-    scale = soup.find(id='curTemp').find(class_='wx-unit').get_text()
+    loc = soup.find(class_='region-content-header').find('h1').get_text()
+    condition = soup.find(class_='condition-icon').get_text()
+    temp = soup.find(class_='wu-unit-temperature').find(class_='wu-value').get_text()
+    scale = soup.find(class_='wu-unit-temperature').find(class_='wu-label').get_text()
 
     loc = cleanup_text(loc)
     loc = find_city_and_state_from_location(loc)

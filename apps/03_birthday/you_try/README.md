@@ -28,11 +28,11 @@ Key concepts introduced
 
 All of these come from the module `datetime`.
 
-* `datetime.datetime # actual date with time class`
+* `datetime.date # actual date class`
 * `datetime.timedelta # class for time spans`
-* The time right now is `datetime.datetime.now()`
-* The difference between two times is done via subtraction: `delta = t1 - t0`
-* `delta.total_seconds()` may be helpful ;)
+* The time right now is `datetime.date.today()`
+* The difference between two dates is done via subtraction: `delta = t1 - t0`
+* `delta.days` may be helpful ;)
 
 
 

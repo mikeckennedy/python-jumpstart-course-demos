@@ -61,7 +61,3 @@ That'd be wonderful! Currently it's in production. Check out [Talk Python Traini
 Thanks!
 
 [@mkennedy](https://twitter.com/mkennedy)
-
-
- 
-

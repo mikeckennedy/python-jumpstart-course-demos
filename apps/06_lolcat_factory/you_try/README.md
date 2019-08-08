@@ -33,3 +33,5 @@ Key concepts introduced
     
     # Linux
     subprocess.call(['xdg-open', folder])
+
+Note: On some Linux distributions, xdg-open may not be available. If that's the case for you, please look at [this article](https://budts.be/weblog/2011/07/xdf-open-vs-exo-open/).

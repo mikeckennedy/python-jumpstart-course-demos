@@ -77,18 +77,27 @@ def search_folders(folder, text):
 
 
 def search_file(filename, search_text):
-    # matches = []
-    with open(filename, 'r', encoding='utf-8') as fin:
 
-        line_num = 0
-        for line in fin:
-            line_num += 1
-            if line.lower().find(search_text) >= 0:
-                m = SearchResult(line=line_num, file=filename, text=line)
-                # matches.append(m)
-                yield m
+    # NOTE: We haven't discussed error handling yet, but we
+    # cover it shortly. However, some folks have been running
+    # into errors where this is passed a binary file and crashes.
+    # This try/except block catches the error and returns no matches.
+    try:
 
-        # return matches
+        # matches = []
+        with open(filename, 'r', encoding='utf-8') as fin:
+
+            line_num = 0
+            for line in fin:
+                line_num += 1
+                if line.lower().find(search_text) >= 0:
+                    m = SearchResult(line=line_num, file=filename, text=line)
+                    # matches.append(m)
+                    yield m
+
+            # return matches
+    except UnicodeDecodeError:
+        print("NOTICE: Binary file {} skipped.".format(filename))
 
 
 if __name__ == '__main__':

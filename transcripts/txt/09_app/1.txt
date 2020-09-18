@@ -43,6 +43,6 @@
 2:17 of writing code that has to run on both, 
 2:20 on Python 2 and Python 3, as you saw, 
 2:23 we are talking about averages and there is a nice statistics module 
-2:25 that was introduced in Python 3.4, it is not available in Pyhton 2, 
+2:25 that was introduced in Python 3.4, it is not available in Python 2, 
 2:29 so what will we do there? Well, you'll see that we can write the same basic code 
 2:32 and just adjust our imports and make it work.

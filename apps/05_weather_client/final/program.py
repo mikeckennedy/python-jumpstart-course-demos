@@ -1,92 +1,114 @@
-import requests
-import bs4
 import collections
+import requests
 
-WeatherReport = collections.namedtuple('WeatherReport',
-                                       'cond, temp, scale, loc')
+Location = collections.namedtuple('Location', 'city state country')
+Weather = collections.namedtuple('Weather', 'location units temp condition')
 
 
 def main():
-    # t = 1, 7, 'cat', [1,2,3]
-    # print(t)
-    # print(t[1])
-    #
-    # n1, n2, s, l = t
-    # print(n1, n2, s, l)
-    # return
+    show_header()
+    location_text = input("Where do you want the weather report (e.g. Portland, US)? ")
+    loc = convert_plaintext_location(location_text)
+    if not loc:
+        print(f"Could not find anything about {location_text}.")
+        return
 
-    print_the_header()
+    weather = call_weather_api(loc)
+    if not weather:
+        print(f"Could not get weather for {location_text} from the API.")
+        return
 
-    # Note: wunderground changed it's URL structure, zipcode no longer works.
-    # We need to pass state and city (sorry folks outside the US).
-    # You can update the URL for your country.
-    state = input('What US state do you want the weather for (e.g. OR)? ')
-    city = input('What city in {} (e.g. Portland)? ')
-
-    html = get_html_from_web(state, city)
-    report = get_weather_from_html(html)
-
-    print('The temp in {} is {} {} and {}.'.format(
-        report.loc,
-        report.temp,
-        report.scale,
-        report.cond
-    ))
+    report_weather(loc, weather)
 
 
-def print_the_header():
+def report_weather(loc, weather):
+    location_name = get_location_name(loc)
+    scale = get_scale(weather)
+    print(f'The weather in {location_name} is {weather.temp} {scale} and {weather.condition}.')
+
+
+def get_scale(weather):
+    if weather.units == 'imperial':
+        scale = "F"
+    else:
+        scale = "C"
+    return scale
+
+
+def get_location_name(location):
+    if not location.state:
+        return f'{location.city.capitalize()}, {location.country.upper()}'
+    else:
+        return f'{location.city.capitalize()}, {location.state.upper()}, {location.country.upper()}'
+
+
+def call_weather_api(loc):
+    # &state=OR
+    url = f'https://weather.talkpython.fm/api/weather?city={loc.city}&country={loc.country}&units=imperial'
+    if loc.state:
+        url += f"&state={loc.state}"
+
+    # print(f"Would call {url}")
+    resp = requests.get(url)
+    if resp.status_code in {400, 404, 500}:
+        # print(f"Error: {resp.text}.")
+        return None
+
+    data = resp.json()
+
+    return convert_api_to_weather(data, loc)
+
+
+def convert_api_to_weather(data, loc):
+    # 'weather': {'description': 'broken clouds', 'category': 'Clouds'}
+    # 'forecast': {'temp': 66.34,
+
+    temp = data.get('forecast').get('temp')
+    w = data.get('weather')
+    condition = f"{w.get('category')}: {w.get('description').capitalize()}"
+    weather = Weather(loc, data.get('units'), temp, condition)
+
+    return weather
+
+
+def convert_plaintext_location(location_text):
+    if not location_text or not location_text.strip():
+        return None
+
+    location_text = location_text.lower().strip()
+    parts = location_text.split(',')
+
+    city = ""
+    state = ""
+    country = 'us'
+    if len(parts) == 1:
+        city = parts[0].strip()
+    elif len(parts) == 2:
+        city = parts[0].strip()
+        country = parts[1].strip()
+    elif len(parts) == 3:
+        city = parts[0].strip()
+        state = parts[1].strip()
+        country = parts[2].strip()
+    else:
+        return None
+
+    # print(f"City={city}, State={state}, Country={country}")
+
+    # t = city, state, country
+    # t[0]
+    # t2 = Location(city, state, country)
+    # t2.city
+
+    return Location(city, state, country)
+    # return city, state, country
+
+
+def show_header():
     print('---------------------------------')
-    print('           WEATHER APP')
+    print('         WEATHER CLIENT')
     print('---------------------------------')
     print()
-
-
-def get_html_from_web(state, city):
-    # Note: wunderground changed it's URL structure, zipcode no longer works.
-    # We need to pass state and city (sorry folks outside the US).
-    # You can update the URL for your country.
-    url = 'https://www.wunderground.com/weather/us/{}/{}'.format(
-        state.lower().strip(), city.lower().strip())
-    response = requests.get(url)
-    # print(response.status_code)
-    # print(response.text[0:250])
-
-    return response.text
-
-
-def get_weather_from_html(html):
-    # cityCss = 'h1' # <-- Changed from video recording.
-    # weatherScaleCss = '.wu-unit-temperature .wu-label'
-    # weatherTempCss = '.wu-unit-temperature .wu-value'
-    # weatherConditionCss = '.condition-icon'
-
-    soup = bs4.BeautifulSoup(html, 'html.parser')
-
-    # Note: Due to the change in HTML at wunderground we need to cleanup
-    # the title a different way:
-    loc = soup.find('h1').get_text() \
-        .replace(' Weather Conditions', '') \
-        .replace('star_ratehome', '')
-
-    condition = soup.find(class_='condition-icon').get_text()
-    temp = soup.find(class_='wu-unit-temperature').find(class_='wu-value').get_text()
-    scale = soup.find(class_='wu-unit-temperature').find(class_='wu-label').get_text()
-
-    loc = cleanup_text(loc)
-    condition = cleanup_text(condition).lower()
-    temp = cleanup_text(temp)
-    scale = cleanup_text(scale)
-
-    report = WeatherReport(cond=condition, temp=temp, scale=scale, loc=loc)
-    return report
-
-
-def cleanup_text(text: str):
-    if not text:
-        return text
-
-    text = text.strip()
-    return text
 
 
 if __name__ == '__main__':

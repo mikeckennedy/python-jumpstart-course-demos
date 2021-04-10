@@ -50,7 +50,7 @@ def game_loop():
     while True:
 
         active_creature = random.choice(creatures)
-        print('A {} of level {} has appear from a dark and foggy forest...'
+        print('A {} of level {} has appeared from a dark and foggy forest...'
               .format(active_creature.name, active_creature.level))
         print()
 

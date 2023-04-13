@@ -12,7 +12,7 @@ def find_movies(search_text):
         raise ValueError("Search text is required")
 
     # This URL changed since the recording to support SSL.
-    url = 'http://movieservice.talkpython.fm/api/search/{}'.format(search_text)
+    url = 'https://movieservice.talkpython.fm/api/search/{}'.format(search_text)
 
     resp = requests.get(url)
     resp.raise_for_status()

@@ -13,7 +13,7 @@ Key concepts introduced
 
 **The API**
 
-You can find the details of the JSON HTTP API at [movieservice.talkpython.fm](http://movieservice.talkpython.fm/).
+You can find the details of the JSON HTTP API at [movieservice.talkpython.fm](https://movieservice.talkpython.fm/).
 
 **Try/Except Error Handling**
 

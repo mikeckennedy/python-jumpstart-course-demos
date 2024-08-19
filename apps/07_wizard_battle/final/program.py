@@ -1,5 +1,5 @@
-import time
 import random
+import time
 
 from actors import Wizard, Creature, SmallAnimal, Dragon
 
@@ -10,7 +10,7 @@ def main():
 
 
 def print_header():
-    # Yes, I added this after I recorded the video
+    # Yes, I added this after I recorded the video,
     # but I thought you'd get a kick out if it. ;)
     print()
     print('-----------------------------------------------------------------------')
@@ -45,7 +45,7 @@ def game_loop():
 
     # print(creatures)
 
-    hero = Wizard('Gandolf', 75)
+    hero = Wizard('Gandalf', 75)
 
     while True:
 
@@ -54,7 +54,7 @@ def game_loop():
               .format(active_creature.name, active_creature.level))
         print()
 
-        cmd = input('Do you [a]ttack, [r]unaway, or [l]ook around? ')
+        cmd = input('Do you [a]ttack, [r]un away, or [l]ook around? ')
         if cmd == 'a':
             if hero.attack(active_creature):
                 creatures.remove(active_creature)

@@ -1,9 +1,10 @@
 import csv
 import os
 
+# noinspection PyBroadException
 try:
     import statistics
-except:
+except:  # noqa: E722
     # error code instead
     import statistics_standin_for_py2 as statistics
 
@@ -86,7 +87,7 @@ def query_data(data):  # list[Purchase]):
     ave_price = statistics.mean(prices)
     print("The average home price is ${:,}".format(int(ave_price)))
 
-    # average price of 2 bedroom houses
+    # average price of 2-bedroom houses
     # prices = []
     # baths = []
     # for pur in data:

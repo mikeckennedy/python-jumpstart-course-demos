@@ -13,7 +13,7 @@ def print_header():
     # Yes, I added this after I recorded the video,
     # but I thought you'd get a kick out if it. ;)
     print()
-    print('-----------------------------------------------------------------------')
+    print(r'-----------------------------------------------------------------------')
     print('''
    (  )   /\   _                 (
     \ |  (  \ ( \.(               )                      _____

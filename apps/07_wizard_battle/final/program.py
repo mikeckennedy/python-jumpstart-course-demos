@@ -10,11 +10,11 @@ def main():
 
 
 def print_header():
-    # Yes, I added this after I recorded the video
+    # Yes, I added this after I recorded the video,
     # but I thought you'd get a kick out if it. ;)
     print()
     print('-----------------------------------------------------------------------')
-    print('''
+    print(r'''
    (  )   /\   _                 (
     \ |  (  \ ( \.(               )                      _____
   \  \ \  `  `   ) \             (  ___                 / _   \\
